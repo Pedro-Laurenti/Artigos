@@ -58,7 +58,7 @@ export default async function Home() {
                         <div className={"flex flex-wrap"}>
                         
                             <h1 className='mb-5 w-full px-3 text-xl font-bold md:text-3xl'>
-                                READ LATEST ARTICLES
+                                Últimos artigos
                             </h1>
 
                             <hr className='border-1 mx-auto mb-5 w-[98%]' />
@@ -71,7 +71,7 @@ export default async function Home() {
                                     isExternal={false}
                                 />
                             ) : (
-                                <p>No Article Found</p>
+                                <p>Ainda não temos nenhum artigo 😢</p>
                             )}
                         </div>
                     </div>
@@ -79,7 +79,7 @@ export default async function Home() {
                 <div className='container mx-auto mt-20 px-0 lg:px-[15px]'>
                     <div className={"flex flex-wrap"}>
                         <h1 className='mb-5 w-full px-3 text-xl font-bold md:text-3xl'>
-                            EXPLORE LATEST SNIPPETS
+                            Últimos Snippets
                         </h1>
                         <hr className='border-1 mx-auto mb-5 w-[98%]' />
                         {allSnippets?.length > 0 ? (
@@ -89,7 +89,7 @@ export default async function Home() {
                                 noOfSnippet={3}
                             />
                         ) : (
-                            <p>No Snippets Found</p>
+                            <p>Ainda não temos nenhum snippet 😢</p>
                         )}
                     </div>
                 </div>

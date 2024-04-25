@@ -12,25 +12,8 @@ const HeroSection = () => {
      <section className="w-full md:pt-[100px] md:pb-[70px] pt-[90px] pb-20 mb-10 dark:bg-slate-800 bg-slate-200">
      
           <div className="container px-3">
-         <div  className="flex flex-wrap items-start md:flex-nowrap justify-center">
-         <Link href="/free-palestine">
-          <h1 className='mb-5 px-3 text-xl font-bold md:text-3xl text-center cursor-pointer'>
-                                I 
-                                <strong style={{
-                                  color:"#149954"
-                                }}> SUPPORT</strong>  
-                                <strong className="text-appRed-100"> PALESTINE</strong> | 
-                                READ WHY
-                            </h1></Link>
-                            <Image
-                                    alt={"palestini-flag"}
-                                    loading='lazy'
-                                    src={PalestinFlag}
-                                    height={40}
-                                    width={40}
-                                    objectFit='contain'
-                                />
-</div>
+        <div  className="flex flex-wrap items-start md:flex-nowrap justify-center">
+        </div>
 
             <div className="flex flex-wrap md:flex-nowrap justify-center items-center">
             
@@ -38,7 +21,12 @@ const HeroSection = () => {
                 <MyInfoCard />
               </div>
 
-              <div className="flex flex-col md:flex-row md:items-center mt-5 md:mt-0">
+              <div className="flex flex-col md:flex-col md:items-center mt-5 md:mt-0 md:w-1/2">
+                <h1 className='mb-5 px-3 text-3xl font-bold text-center cursor-pointer'>
+                  <strong className="text-appGray-400 dark:text-appGray-100">Artigos </strong>
+                    <strong className="text-appBlue-100 dark:text-appBlue-50"> Therapies Love Kids </strong>
+                </h1>
+
                 <div className="flex justify-center mt-5 flex-wrap ">
                   <ContentsTypeCard />
                 </div>

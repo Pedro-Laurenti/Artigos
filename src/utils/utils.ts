@@ -30,7 +30,7 @@ export const changeTheme = (): void => {
   const lsTheme = localStorage.getItem("theme");
   localStorage.setItem(
     "theme",
-    lsTheme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT
+    lsTheme === THEMES.LIGHT ? THEMES.LIGHT : THEMES.DARK
   );
 
   if (

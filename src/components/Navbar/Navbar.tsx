@@ -5,31 +5,28 @@ import {
   combineClasses,
   removeBodyNoScroll,
 } from "@/utils/utils";
-import Image from "next/legacy/image";
-import PalestinFlag from '../../app/free-palestine/images/Palestine.jpg'
-import './Palestinianflag.css'
-// import Search from "../Search";
+
 import classes from "./Navbar.module.scss";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
-// import { AiOutlineSearch } from "react-icons/ai";
-
 import { LOGO } from "@/constants/_APP_SETUP";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [showSearch, setShowSearch] = useState(false);
+  const [logoSrc, setLogoSrc] = useState('');
 
   useEffect(() => {
-    showSearch
-      ? addBodyNoScroll()
-      : () => {
-          return;
-        };
-    return () => {
-      removeBodyNoScroll();
-    };
+    setShowSearch(false); // Fechar a busca ao mudar o tema
+  }, [theme]);
+
+  useEffect(() => {
+    setLogoSrc(theme === 'dark' ? "./logo-white.svg" : "./logo-dark.svg");
+  }, [theme]);
+
+  useEffect(() => {
+    showSearch ? addBodyNoScroll() : removeBodyNoScroll();
   }, [showSearch]);
 
   const changeTheme = () => {
@@ -45,7 +42,7 @@ const Navbar = () => {
       <nav
         className={combineClasses(
           classes.navbar,
-          "bg-white  dark:bg-slate-900 dark:text-white text-black"
+          "bg-white dark:bg-slate-900 dark:text-white text-black"
         )}
       >
         <div
@@ -57,38 +54,15 @@ const Navbar = () => {
         >
           <div className="flex items-center">
             <Link href="/" className="text-[22px] font-semibold">
-              {LOGO}
+              <img
+                src={logoSrc}
+                alt="Therapies Love Kids Logo"
+                style={{ width: '100px', height: '50px' }}
+              />
             </Link>
           </div>
 
           <div className="flex items-start">
-          <Link href="/free-palestine">
-                                <Image
-                                    alt={"palestini-flag"}
-                                    loading='lazy'
-                                    src={PalestinFlag}
-                                    height={20}
-                                    width={30}
-                                    objectFit='contain'
-                                />
-</Link>
-{/* <div class="background">
-  <div class="top"></div>
-  <div class="middle"></div>
-  <div class="triangle"></div>
-</div> */}
-            {/* <div
-              className={combineClasses(
-                classes.search_icon_wrapper,
-                "ml-5 dark:text-white"
-              )}
-              onClick={() => openSearch()}
-            >
-              <button name="search-button" aria-label="search button">
-                <AiOutlineSearch className="dark:text-white text-black text-[22px]" />
-              </button>
-            </div> */}
-
             <button
               name="theme-switch"
               aria-label="theme button"

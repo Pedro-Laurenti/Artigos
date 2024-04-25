@@ -5,8 +5,8 @@ interface ContentType {
 
 const allTypesContent: ContentType[] = [
   {
-    name: "Articles",
-    url: "/articles",
+    name: "Artigos",
+    url: "/artigos",
   },
   {
     name: "Snippets",
@@ -17,12 +17,12 @@ const allTypesContent: ContentType[] = [
     url: "/tags",
   },
   {
-    name: "Categories",
-    url: "/categories",
+    name: "Categorias",
+    url: "/categorias",
   },
   {
-    name: "Series",
-    url: "/series",
+    name: "Coleções",
+    url: "/colecoes",
   },
   
 ];

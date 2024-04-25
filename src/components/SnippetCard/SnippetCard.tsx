@@ -38,7 +38,7 @@ const SnippetCard = ({ snippet, path }: SnippetCardProps) => {
             >
               <span className="pr-1">
                 {" "}
-                {format(new Date(_createdAt), "MMMM d, yyyy")}
+                {format(new Date(_createdAt), " d, M yyyy")}
               </span>
             </p>
             <Link href={path}>

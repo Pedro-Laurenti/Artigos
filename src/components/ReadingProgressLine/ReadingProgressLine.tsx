@@ -35,7 +35,7 @@ const ReadingProgressLine = ({ target }: { target: any }) => {
 
   return (
     <div
-      className={`reading-progress-bar dark:bg-appRed-100 bg-appPurple-100`}
+      className={`reading-progress-bar dark:bg-appBlue-50 bg-appBlue-100`}
       style={{ width: `${readingProgress}%` }}
     />
   );

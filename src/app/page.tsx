@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: WEBSITE_NAME,
         description: META_DESCRIPTION,
-        url: 'https://www.syedamaham.dev',
+        url: 'https://www.artigos.therapieslovekids.com',
         siteName: WEBSITE_NAME,
         images: [
           {
@@ -27,10 +27,10 @@ export const metadata: Metadata = {
             url: './blog-banner.png',
             width: 1800,
             height: 1600,
-            alt: 'Syeda Maham Fahim',
+            alt: 'Artigos Therapies Love Kids',
           },
         ],
-        locale: 'en_US',
+        locale: 'pt_BR',
         type: 'website',
       },
   };

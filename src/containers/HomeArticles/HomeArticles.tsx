@@ -53,7 +53,7 @@ const HomeArticles: React.FC<HomeArticleProps> = ({
                   article={each}
                   key={i}
                   isExternal={isExternal}
-                  path={`${isSeries ? "/series/":isExternal?'':"/articles/"}${each.slug.current}`}
+                  path={`${isSeries ? "/series/":isExternal?'':"/artigos/"}${each.slug.current}`}
                 />
               ))
           : null}
@@ -81,11 +81,9 @@ const HomeArticles: React.FC<HomeArticleProps> = ({
       {isArchive && (
         <div className="w-full flex items-center">
           <Link
-            href={"/articles"}
-            className="
-                                w-auto h-auto text-sm py-3 px-10 text-center dark:bg-slate-800 bg-appRed-100 rounded-full mx-auto text-white font-bold hover:!text-white dark:hover:!text-slate-400 transition-all transform hover:scale-105"
-          >
-            View All Articles
+            href={"/artigos"}
+            className="w-auto h-auto text-sm py-3 px-10 text-center dark:bg-slate-800 bg-appBlue-100 rounded-full mx-auto text-white font-bold hover:!text-white dark:hover:!text-slate-400 transition-all transform hover:scale-105">
+            Todos os artigos
           </Link>
         </div>
       )}

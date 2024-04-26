@@ -26,12 +26,12 @@ const Profiles = async () => {
             title
             className="mb-5 mt-10 dark:text-appRed-100 text-appPurple-100"
           >
-            Profiles
+            Perfils
           </Text>
 
           <div className="grid">
             {
-              profiles?.length === 0 &&  <p>No Profiles Found</p>
+              profiles?.length === 0 &&  <p>Conteúdo não encontrado</p>
             }
 
             {/* @ts-ignore */}

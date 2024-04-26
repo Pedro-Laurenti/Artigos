@@ -11,7 +11,7 @@ const CategoryCard: React.FC<CategoryCardProps> =  ({ name, url, total }) => {
   const color = getRandomHexColor();
   return (
     <>
-      <Link href={`/categories/${url}`} >
+      <Link href={`/categorias/${url}`} >
         <div
           className={`bg-gradient-to-bl text-white flex items-center font-semibold py-3 px-5  rounded-full justify-between transform transition ease-in-out duration-200 hover:scale-95 cursor-pointer`}
           style={{

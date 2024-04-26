@@ -24,7 +24,7 @@ const ExternalArticles = async () => {
                     title
                     className='center mb-5 mt-10 text-appPurple-100 dark:text-appRed-100'
                 >
-                    External Articles✨
+                    Artigos externos ✨
                 </Text>
                 <div className={"flex flex-col flex-wrap"}>
                     {articles?.length > 0 ? (
@@ -36,7 +36,7 @@ const ExternalArticles = async () => {
                             isExternal={true}
                         />
                     ) : (
-                        <p>No External Articles Found</p>
+                        <p>Conteúdo não encontrado</p>
                     )}
                 </div>
             </div>

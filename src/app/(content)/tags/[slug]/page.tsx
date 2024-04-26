@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!post)
     return {
-      title: "Not Found",
-      description: "The page is not found",
+      title: "Não encontrado",
+      description: "Página não encontrada",
     };
 
   return {
@@ -44,8 +44,8 @@ const TagDetail = async ({ params }: { params: { slug: string } }) => {
                 <Breadcrumbs pageName='Tag' pageSlug={title} pageLink='/tags' />
                 <Text
                     title
-                    className='mb-8 mt-10 capitalize text-appPurple-100 
-          dark:text-appRed-100'
+                    className='mb-8 mt-10 capitalize text-appBlue-100 
+          dark:text-appBlue-50'
                 >
                     {title}
                 </Text>
@@ -60,7 +60,7 @@ const TagDetail = async ({ params }: { params: { slug: string } }) => {
                             isExternal={false}
                         />
                     ) : (
-                        <h1>No Articles Found </h1>
+                        <h1>Nenhum artigo encontrado </h1>
                     )}
                 </div>
             </div>

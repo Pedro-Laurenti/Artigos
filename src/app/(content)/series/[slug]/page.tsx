@@ -46,7 +46,7 @@ const SeriesDetail = async ({ params }: { params: { slug: string } }) => {
             <p>No Article Found</p>
           ) : (<>  <Text
             title
-            className="mb-8 mt-10 dark:text-appRed-100 text-appPurple-100 
+            className="mb-8 mt-10 dark:text-appBlue-50 text-appBlue-100 
             capitalize"
           >
             

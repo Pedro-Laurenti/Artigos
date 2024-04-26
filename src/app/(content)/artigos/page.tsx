@@ -24,9 +24,9 @@ const Article = async () => {
 
                 <Text
                     title
-                    className='mb-5 mt-10 text-appPurple-100 dark:text-appRed-100'
+                    className='mb-5 mt-10 text-appBlue-100 dark:text-appBlue-50'
                 >
-                    Article 📚
+                    Artigos
                 </Text>
                 <div className={"flex flex-col flex-wrap"}>
                     {articles?.length > 0 ? (
@@ -38,7 +38,7 @@ const Article = async () => {
                             isExternal={false}
                         />
                     ) : (
-                        <p>No Article Found</p>
+                        <p>Nenhum artigo encontrado</p>
                     )}
                 </div>
             </div>

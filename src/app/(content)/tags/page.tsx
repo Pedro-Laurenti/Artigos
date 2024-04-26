@@ -8,8 +8,8 @@ import { sanityFetch } from "@/sanity/lib/sanityFetch";
 
 export const metadata: Metadata = {
     title: "Tags",
-    description: `Explore ${WEBSITE_NAME} tagged content. Navigate through our tech insights and coding expertise based on specific tags.`,
-    keywords: "tags, tech insights, coding expertise, specific topics",
+    description: `Explore o conteúdo marcado do ${WEBSITE_NAME}. Navegue por nossos insights tecnológicos e expertise em codificação com base em tags específicas.`,
+    keywords: "tags, insights tecnológicos, expertise em codificação, tópicos específicos",
 };
 
 const Tags = async () => {
@@ -23,15 +23,15 @@ const Tags = async () => {
 
                 <Text
                     title
-                    className='mb-5 mt-10 text-appPurple-100 dark:text-appRed-100'
+                    className='mb-5 mt-10 text-appBlue-100 dark:text-appBlue-50'
                 >
-                    Tags 💡
+                    Tags
                 </Text>
                 <div className='flex flex-wrap items-center justify-start'>
                   
 
                   {
-                    getAllTags?.length === 0 && <p>No tags found</p>
+                    getAllTags?.length === 0 && <p>Nenhuma tag encontrada</p>
                   }
                   {/* @ts-ignore */}
                     {getAllTags?.map((tag, index) => {

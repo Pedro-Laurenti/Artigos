@@ -1,64 +1,65 @@
 import {
-  AiFillGithub,
+  AiFillYoutube,
   AiOutlineTwitter,
-  AiFillLinkedin,
-  AiFillMediumSquare
+  AiFillInstagram
 } from "react-icons/ai";
+
+import {
+  FaTiktok,
+} from "react-icons/fa";
+
 
 const footerLinks = {
   
     legal: [
       {
-        name: "Privacy Policy",
-        url: "/legal/privacy-policy",
+        name: "Política de privacidade",
+        url: "/legal/politica-de-privacidade",
       },
       {
-        name: "Disclaimers",
-        url: "/legal/disclaimers",
-      },
-      {
-        name: "Terms and Conditions",
-        url: "/legal/terms-and-conditions",
+        name: "Termos e condições",
+        url: "/legal/termos-e-condicoes",
       },
     ],
   
   
     quick: [
       {
-        name: "About",
-        url: "/about",
+        name: "Therapies Love Kids",
+        url: "https://www.therapieslovekids.com/",
       },
       {
-        name: "Contact",
-        url: "/contact",
+        name: "Sobre",
+        url: "/sobre",
       },
       {
-        name: "External Articles",
-        url: "/external-articles",
+        name: "Contato",
+        url: "/contato",
       },
       
     ],
     socialMedia:[
       
       {
-        name:"Linkedin",
-        url:"https://www.linkedin.com/in/syedamahamfahim/",
-        icons:<AiFillLinkedin/>
-      },
-      {
-        name:"GitHub",
-        url:"https://github.com/SyedaMahamFahim",
-        icons:<AiFillGithub/>
+        name:"Youtube",
+        url:"https://www.youtube.com/@therapieslovekids",
+        icons:<AiFillYoutube/>
       },
       {
         name:"Twitter",
-        url:"https://twitter.com/0xSyedaMaham",
+        url:"https://twitter.com/therapieslovekd",
         icons:<AiOutlineTwitter/>
+
       },
       {
-        name:"Medium",
-        url:"https://medium.com/@syedamahamfahim/",
-        icons:<AiFillMediumSquare/>
+        name:"TikTok",
+        url:"https://www.tiktok.com/@therapieslovekids",
+        icons:<FaTiktok/>
+      },
+      {
+        name:"Instagram",
+        url:"https://www.instagram.com/therapieslovekids/",
+        icons:<AiFillInstagram/>
       },
     ]
   

@@ -7,9 +7,9 @@ import { getSeriesQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 
 export const metadata: Metadata = {
-    title: "Series",
-    description: `Dive into tech series by ${WEBSITE_NAME}. Follow our in-depth explorations of coding, data engineering, and more.`,
-    keywords: "tech series, coding, data engineering, in-depth exploration",
+    title: "Séries",
+    description: `Acompanhe nossas explorações detalhadas sobre terapia infantil, desenvolvimento emocional e muito mais.`,
+    keywords: "séries de terapia infantil amorosa, terapia infantil, desenvolvimento emocional, exploração detalhada",
 };
 
 const Series = async () => {
@@ -23,9 +23,9 @@ const Series = async () => {
 
                 <Text
                     title
-                    className='mb-5 mt-10 text-appPurple-100 dark:text-appRed-100'
+                    className='mb-5 mt-10 text-appBlue-100 dark:text-appBlue-50'
                 >
-                    Series 🎢
+                    Séries
                 </Text>
                 <div className={"flex flex-col flex-wrap"}>
                 {
@@ -37,7 +37,7 @@ const Series = async () => {
                 isSeries={true}
                 isExternal={false}
             />
-            ) : <p>No Series Found</p>
+            ) : <p>Nenhuma série encontrada</p>
           }
                     
                 </div>

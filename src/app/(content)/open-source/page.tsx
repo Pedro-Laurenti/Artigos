@@ -26,9 +26,9 @@ const OpenSource = async () => {
 
           <Text
             title
-            className="mb-5 mt-10 dark:text-appRed-100 text-appPurple-100"
+            className="mb-5 mt-10 dark:text-appBlue-50 text-appBlue-100"
           >
-            Open Source 🔓 
+            Open Source
           </Text>
           <OpenSourceSection
           OS={openSourceProjects}

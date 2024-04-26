@@ -1,11 +1,14 @@
 @import "@/styles/utils/mixins";
 
 .social_media_icons{
-    font-size: 30px;
+    font-size: 20px;
     padding: 0px 5px 5px 0px;
+    height: 30px ;
+    width: 30;
+    overflow: hidden;
 
     &:hover {
-        @apply text-appRed-100;
+        @apply text-appBlue-100;
       }
 
 }

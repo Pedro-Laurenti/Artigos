@@ -76,8 +76,6 @@ export interface iSEO {
   url?: string;
 }
 
-
-
 export interface iNavLink {
   label: string;
   path: string;

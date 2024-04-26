@@ -9,8 +9,8 @@ import { Key } from "react";
 
 export const metadata: Metadata = {
   title:'Authors',
-  description: `Discover the collective expertise of ${WEBSITE_NAME}' authors. Explore insights, articles, and tech perspectives from our diverse team`,
-  keywords: 'authors, collective expertise, insights, articles, tech perspectives, diverse team',
+  description: `Descubra a expertise coletiva dos autores do ${WEBSITE_NAME}. Explore insights, artigos e perspectivas tecnológicas de nossa equipe diversificada.`,
+  keywords: 'autores, expertise coletiva, insights, artigos, perspectivas tecnológicas, equipe diversificada',
 };
 
 const Authors = async () => {
@@ -24,9 +24,9 @@ const Authors = async () => {
 
         <Text
           title
-          className="mb-5 mt-10 dark:text-appRed-100 text-appPurple-100"
+          className="mb-5 mt-10 dark:text-appRed-100 text-appBlue-100"
         >
-          Authors 🎨 
+          Autores 🎨 
         </Text>
         <div className="flex flex-wrap justify-start items-center">
           {/* @ts-ignore */}

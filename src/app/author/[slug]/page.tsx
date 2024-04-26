@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!author)
     return {
-      title: "Not Found",
-      description: "The page is not found",
+      title: "Não encontrado",
+      description: "Página não encontrada",
     };
 
   return {
@@ -42,7 +42,7 @@ const AuthorDetails = async ({ params }: { params: { slug: string } }) => {
 
         <Text
           title
-          className="mb-5 mt-10 dark:text-appRed-100 text-appPurple-100 center"
+          className="mb-5 mt-10 dark:text-appRed-100 text-appBlue-100 center"
         >
           Articles✨
         </Text>

@@ -1,7 +1,7 @@
 export const WEBSITE_NAME: string = "Artigos Therapies Love Kids";
 export const WEBSITE_URL: string = "https://artigos.therapieslovekids.com";
 
-export const LOGO: any = "./logo-dark.svg";
+export const LOGO: any = "Artigos TLK";
 
 export const META_DESCRIPTION= `"Artigos TLK" é um blog que oferece recursos sobre terapias e cuidados infantis, visando apoiar pais, cuidadores e profissionais da saúde na promoção do bem-estar das crianças.`
 

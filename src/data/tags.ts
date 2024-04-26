@@ -1,27 +1,35 @@
 const tags=[
     {
-        name:"Reactjs",
-        url:"https://reactjs.org/"
+        name:"Psicologia",
+        url:"/tags/psicologia"
     },
     {
-        name:"Nodejs",
-        url:"https://nodejs.org/en/"
+        name:"Neuropsicologia",
+        url:"/tags/neuropsicologia"
     },
     {
-        name:"Expressjs",
-        url:"https://expressjs.com/"
+        name:"Terapia Ocupacional",
+        url:"/tags/terapia-ocupacional"
     },
     {
-        name:"MongoDB",
-        url:"https://www.mongodb.com/"
+        name:"Musicoterapia",
+        url:"/tags/musicoterapia"
     },
     {
-        name:"Mongoose",
-        url:"https://mongoosejs.com/"
+        name:"Fonoaudiologia",
+        url:"/tags/fonoaudiologia"
     },
     {
-        name:"Javascript",
-        url:"https://www.javascript.com/"
+        name:"Fisioterapia",
+        url:"/tags/fisioterapia"
+    },
+    {
+        name:"Psicomotricidade",
+        url:"/tags/psicomotricidade"
+    },
+    {
+        name:"Neuropsicopedagogia",
+        url:"/tags/neuropsicopedagogia"
     },
 ]
 export default tags;

@@ -10,19 +10,17 @@ import classes from "./Navbar.module.scss";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
-import { LOGO } from "@/constants/_APP_SETUP";
+import Image from "next/image";
+
+import LogoDark from "@publ/logo-dark.svg";
+import LogoWhite from "@publ/logo-white.svg";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [showSearch, setShowSearch] = useState(false);
-  const [logoSrc, setLogoSrc] = useState('');
 
   useEffect(() => {
-    setShowSearch(false); // Fechar a busca ao mudar o tema
-  }, [theme]);
-
-  useEffect(() => {
-    setLogoSrc(theme === 'dark' ? "./logo-white.svg" : "./logo-dark.svg");
+    setShowSearch(false);
   }, [theme]);
 
   useEffect(() => {
@@ -31,10 +29,6 @@ const Navbar = () => {
 
   const changeTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
-  };
-
-  const openSearch = () => {
-    setShowSearch(true);
   };
 
   return (
@@ -54,10 +48,17 @@ const Navbar = () => {
         >
           <div className="flex items-center">
             <Link href="/" className="text-[22px] font-semibold">
-              <img
-                src={logoSrc}
+              <Image
+                src={LogoDark}
                 alt="Therapies Love Kids Logo"
                 style={{ width: '100px', height: '50px' }}
+                className="block dark:hidden"
+              />
+              <Image
+                src={LogoWhite}
+                alt="Therapies Love Kids Logo"
+                style={{ width: '100px', height: '50px' }}
+                className="hidden dark:block"
               />
             </Link>
           </div>

@@ -39,13 +39,13 @@ const Legal = async ({ params }: { params: { slug: string } }) => {
                 <div className='container px-0 pb-[20px] pt-[10px] md:px-[15px]'>
                   {
                     !legal ? (
-                      <p>No Legal Found</p>
+                      <p>Conteúdo não encontrado</p>
                     ) :(<>
                     <Text p className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-appPurple-100 dark:text-appRed-100'>
                         Created At:{" "}
-                        {format(new Date(legal?._createdAt), "MMMM d, yyyy")} |
+                        {format(new Date(legal?._createdAt), "d - MM - yyyy")} |
                         Last Updated At:
-                        {format(new Date(legal?._updatedAt), "MMMM d, yyyy")}
+                        {format(new Date(legal?._updatedAt), "d - MM - yyyy")}
                     </Text>
 
                     <div className='grid'>

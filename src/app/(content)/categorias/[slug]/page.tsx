@@ -46,7 +46,7 @@ const CategoryDetail = async ({ params }: { params: { slug: string } }) => {
                 <Text
                     title
                     className='mb-8 mt-10 capitalize text-appPurple-100 
-          dark:text-appRed-100'
+          dark:text-appBlue-50'
                 >
                     {title}
                 </Text>
@@ -60,7 +60,7 @@ const CategoryDetail = async ({ params }: { params: { slug: string } }) => {
                             isExternal={false}
                         />
                     ) : (
-                        <h1>No Articles Found </h1>
+                        <h1>Nenhum artigo encontrado </h1>
                     )}
                 </div>
             </div>

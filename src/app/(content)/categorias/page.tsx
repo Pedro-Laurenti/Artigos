@@ -7,8 +7,8 @@ import { getCategoriesQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 
 export const metadata: Metadata = {
-    title: "Categories",
-    description: `Explore diverse tech categories with ${WEBSITE_NAME}. From coding to data engineering, uncover insights across a range of topics.`,
+    title: "Categorias",
+    description: `Explore diversas categorias de terapias infantis no ${WEBSITE_NAME}. De terapia de jogo a terapia de arte, descubra insights em uma variedade de tópicos relacionados ao bem-estar infantil.`,
     keywords: META_SEO_KEYWORDS,
 };
 
@@ -23,9 +23,9 @@ const Categories = async () => {
 
                 <Text
                     title
-                    className='mb-5 mt-10 text-appPurple-100 dark:text-appRed-100'
+                    className='mb-5 mt-10 text-appBlue-100 dark:text-appBlue-50'
                 >
-                    Categories 🐈
+                    Categorias
                 </Text>
                 <div className='xs:grid-cols-2 grid grid-cols-1 gap-3 pb-4 md:grid-cols-3 lg:grid-cols-4 lg:pb-8'>
                     {/* @ts-ignore */}
@@ -42,7 +42,7 @@ const Categories = async () => {
                             );
                         })
                     ) : (
-                        <p>No Category Found</p>
+                        <p>Nenhuma categoria encontrada</p>
                     )}
                    
                 </div>

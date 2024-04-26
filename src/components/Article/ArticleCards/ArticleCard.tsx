@@ -39,7 +39,7 @@ const ArticleCard = ({ article, path, isExternal }: IProp) => {
       <div
         className={combineClasses(
           classes.article_card,
-          "border-b-[5px] border-appRed-100 dark:bg-slate-800 dark:text-white dark:drop-shadow-lg flex flex-col justify-between pb-5"
+          "border-b-[5px] dark:border-appBlue-50 border-appBlue-100 dark:bg-slate-800 dark:text-white dark:drop-shadow-lg flex flex-col justify-between pb-5"
         )}
       >
         <div>
@@ -57,10 +57,10 @@ const ArticleCard = ({ article, path, isExternal }: IProp) => {
 
           <div className={"d-block px-[15px] py-0"}>
             <p
-              className={"font-bold text-xs pt-3 mb-0 md:mb-3 text-appRed-100"}
+              className={"font-bold text-xs pt-3 mb-0 md:mb-3 text-appBlue-100 dark:text-appBlue-50"}
             >
               <span className="pr-1">
-              {format(new Date(publishedAt), "MMMM d, yyyy")}
+              {format(new Date(publishedAt), "d - MM - yyyy")}
               </span>{" "}
               {readTime.text !== "0 min read" && (
                 <>
@@ -68,7 +68,7 @@ const ArticleCard = ({ article, path, isExternal }: IProp) => {
                   |{" "}
                   <span className="pl-1 text-transfrom-capitalize">
                     {" "}
-                    {estimatedReadingTime ? estimatedReadingTime : '2'} mins
+                    {estimatedReadingTime ? estimatedReadingTime : '2'} minutos
                   </span>{" "}
                 </>
               )}

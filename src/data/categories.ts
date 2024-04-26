@@ -1,49 +1,24 @@
 const categories=[
     {
-        name: 'All',
+        name: 'Todos',
         url: '/all',
         total:20
     },
     {
-        name: 'Web Development',
-        url: '/web-development',
+        name: 'Artigos científicos',
+        url: '/artigos-cientificos',
         total:3
     },
     {
-        name: 'Cloud Development',
-        url: '/cloud-development',
+        name: 'Postagens comuns',
+        url: '/postagens-comuns',
         total:3
     },
     {
-        name: "Figma",
-        url: "/figma",
-        total:3
-      },
-      {
-        name: "Visual Studio Code",
-        url: "/vscode",
-        total:3
-      },
-      {
-        name: "GitHub",
-        url: "https://github.com",
-        total:3
-      },
-      {
-        name: "Postman",
-        url: "https://www.postman.com",
-        total:3
-      },
-      {
-        name: "Docker",
-        url: "https://www.docker.com",
-        total:3
-      },
-      {
-        name: "NGINX",
-        url: "https://www.nginx.com",
-        total:3
-      },
+      name: "Notícias",
+      url: "/noticias",
+      total:3
+    },
 ]
 
 export default categories;

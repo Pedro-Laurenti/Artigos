@@ -7,6 +7,7 @@ import { SanityDocument } from "@sanity/client";
 import { postsQuery, snippetsQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 import { Suspense } from "react";
+import { Flow } from "@/components";
 
 import { Metadata } from 'next'
 import {WEBSITE_NAME,META_DESCRIPTION} from '@/constants/_APP_SETUP'
@@ -53,7 +54,8 @@ export default async function Home() {
                 key={Math.random()}
             >
                 <HeroSection />
-                <Suspense fallback={"Data is Laoding"}>
+                
+                <Suspense fallback={"Carregando"}>
                     <div className='container mx-auto mb-20 px-0 lg:px-[15px]'>
                         <div className={"flex flex-wrap"}>
                         
@@ -75,7 +77,11 @@ export default async function Home() {
                             )}
                         </div>
                     </div>
+                
                 </Suspense>
+
+                <Flow />
+
                 <div className='container mx-auto mt-20 px-0 lg:px-[15px]'>
                     <div className={"flex flex-wrap"}>
                         <h1 className='mb-5 w-full px-3 text-xl font-bold md:text-3xl'>

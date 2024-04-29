@@ -18,8 +18,8 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             
             {/* About Us */}
-            <div className="flex flex-col text-appBlue-200 dark:text-appGray-100 col-span-2">
-              <div className="text-lg font-semibold mb-4">
+            <div className="flex flex-col text-appBlue-200 dark:text-appGray-100 md:col-span-2">
+              <div className="text-lg font-semibold mb-2">
                 <Image
                   src={LogoDark}
                   alt="Therapies Love Kids Logo"
@@ -32,9 +32,8 @@ const Footer = () => {
                   style={{ width: '100px', height: '50px' }}
                   className="hidden dark:block mb-4"
                 />
-                <h1>Therapies Love Kids</h1>
               </div>
-              <div className="flex mt-4 md:mt-0">
+              <div className="flex mt-2 md:mt-0">
                 <div className="flex justify-between w-1/3">
                   {socialMedia.map((item, index) => {
                     return (
@@ -52,7 +51,7 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Contact Us */}
+            {/* Páginas */}
             <div className="flex flex-col text-appBlue-200 dark:text-appGray-100 ">
               <div className="text-lg font-semibold mb-4">
                 <h6>Páginas</h6>

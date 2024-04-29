@@ -43,7 +43,7 @@ const SeriesDetail = async ({ params }: { params: { slug: string } }) => {
         
         {
           !articles ? (
-            <p>No Article Found</p>
+            <p>Nenhum artigo encontrado</p>
           ) : (<>  <Text
             title
             className="mb-8 mt-10 dark:text-appBlue-50 text-appBlue-100 
@@ -60,7 +60,7 @@ const SeriesDetail = async ({ params }: { params: { slug: string } }) => {
                           isSeries={false} isExternal={false}
                           />
                       ) : (
-                          <p>No Article Found</p>
+                          <p>Nenhum artigo encontrado</p>
                       )}
           </div></>)
         }

@@ -18,8 +18,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
   if (!legal)
     return {
-      title: "Not Found",
-      description: "The page is not found",
+      title: "Ops...",
+      description: "Página não encontrada",
     };
 
   return {
@@ -42,9 +42,9 @@ const Legal = async ({ params }: { params: { slug: string } }) => {
                       <p>Conteúdo não encontrado</p>
                     ) :(<>
                     <Text p className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-appPurple-100 dark:text-appRed-100'>
-                        Created At:{" "}
+                        Criado à:{" "}
                         {format(new Date(legal?._createdAt), "d - MM - yyyy")} |
-                        Last Updated At:
+                        Atualizado à:
                         {format(new Date(legal?._updatedAt), "d - MM - yyyy")}
                     </Text>
 

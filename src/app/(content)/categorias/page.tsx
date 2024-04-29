@@ -8,7 +8,7 @@ import { sanityFetch } from "@/sanity/lib/sanityFetch";
 
 export const metadata: Metadata = {
     title: "Categorias",
-    description: `Explore diversas categorias de terapias infantis no ${WEBSITE_NAME}. De terapia de jogo a terapia de arte, descubra insights em uma variedade de tópicos relacionados ao bem-estar infantil.`,
+    description: `Explore diversas categorias de estudos científicos relacionados à terapia infantil na ${WEBSITE_NAME}.`,
     keywords: META_SEO_KEYWORDS,
 };
 

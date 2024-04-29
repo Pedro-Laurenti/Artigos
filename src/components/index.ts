@@ -23,3 +23,5 @@ export const Breadcrumbs=dynamic(()=>import('./Breadcrumbs/Breadcrumbs'))
 export const ProfileLink=dynamic(()=>import('./ProfileLink/ProfileLink'))
 
 export const GitHubComment = dynamic(()=>import('./GitHubComment/GitHubComment'))
+
+export const Flow = dynamic(()=>import('./Flow/Flow'))

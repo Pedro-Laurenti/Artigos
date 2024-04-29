@@ -22,7 +22,7 @@ const About = async () => {
             <section className='m-4 mt-20 dark:bg-slate-900 dark:text-white'>
                 <div className='container px-0 pb-[20px] pt-[10px] md:px-[15px]'>
                     {about?.length === 0 ? (
-                        <p>No About Information Found</p>
+                        <p>Nenhuma informação encontrada</p>
                     ) : (
                         <>
                             <Text

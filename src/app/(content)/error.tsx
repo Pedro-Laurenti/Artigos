@@ -17,7 +17,7 @@ export default function Error({
   return (
     <div>
       <h2>Ops!</h2>
-      <h3>Tivemos algum problema...</h3>
+      <h3>Tivemos um problema...</h3>
       <button
         onClick={
           () => reset()

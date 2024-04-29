@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     });
     if (!post)
         return {
-            title: "Not Found",
-            description: "The page is not found",
+            title: "Ops",
+            description: "TPágina não encontrada",
         };
 
     return {

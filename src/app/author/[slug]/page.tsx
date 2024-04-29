@@ -55,7 +55,7 @@ const AuthorDetails = async ({ params }: { params: { slug: string } }) => {
                         isExternal={false}
                         />
                     ) : (
-                        <h1>No Articles Found </h1>
+                        <h1>Nenhum artigo encontrado </h1>
                     )}
           
         </div>

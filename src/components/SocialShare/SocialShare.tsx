@@ -13,9 +13,9 @@ const SocialShare = () => {
   const url =
     typeof window !== "undefined" ? window.location.href : WEBSITE_URL;
 
-  const twitterShare = `http://twitter.com/share?text=Check out this article!! &url=${url}&hashtags=webdevelopment,javacript,javascriptdaily,webdevelopmenttutorial,tutorial`;
+  const twitterShare = `http://twitter.com/share?text=Olha que bacana! &url=${url}&hashtags=terapies,terapieslovekids,kids,autismo,terapia`;
   const facebookShare = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-  const linkedinShare = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=Check out this article!!&source=LinkedIn`;
+  const linkedinShare = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=Olha que bacana!&source=LinkedIn`;
 
   const trackShareEvent = (social: string) => {
     GAEvent({

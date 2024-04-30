@@ -7,12 +7,13 @@ export default defineType({
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
+      title: 'Título',
       type: 'string',
     }),
     defineField({
       name: "slug",
       title: "Slug",
+      description: "A URL (ou rota) do conteúdo",
       type: "slug",
       options: {
         source: "title",
@@ -21,7 +22,8 @@ export default defineType({
     }),
     defineField({
       name: "meta_description",
-      title: "Meta Description",
+      title: "Descrição Meta",
+      description: "resumo do conteúdo que aparece na página de pesquisa do Google",
       type: "text",
     }),
   ],

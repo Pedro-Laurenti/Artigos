@@ -44,10 +44,10 @@ const SocialShare = () => {
     }
   }, [showCopiedAlert]);
 
-  const inlineWrapper= deviceSize === "desktop" ? "12%" :"1px"
+  const inlineWrapper= deviceSize === "desktop" ? "2%" :"1px"
   const wrapper =
     deviceSize === "desktop"
-      ? "fixed right-12 top-1/2 transform -translate-y-1/2 flex flex-col "
+      ? "fixed right-2 top-1/2 transform -translate-y-1/2 flex flex-col "
       : "flex flex-wrap items-center";
 
   const onShare = (
@@ -68,9 +68,9 @@ const SocialShare = () => {
         right:inlineWrapper
       }}
       >
-        <p className={`${deviceSize !== "desktop" && "hidden"}`}>Share</p>
+        {/* <p className={`${deviceSize !== "desktop" && "hidden"} rotate-[-90deg] mb-10`}>Compartilhar</p> */}
         <a
-           className={`m-2 p-2 ${deviceSize && "rounded-full border-2"}`}
+          className={`m-2 p-2 ${deviceSize && "rounded-full border-2 opacity-75 hover:opacity-100"}`}
           aria-label="facebook-share"
           href={facebookShare}
           onClick={() =>
@@ -81,13 +81,13 @@ const SocialShare = () => {
             )
           }
           target="popup"
-          title="Share on Facebook"
+          title="Compartilhar no Facebook"
 
         >
           <AiFillFacebook className="text-[26px]" />
         </a>
         <a
-          className={`m-2 p-2 ${deviceSize && "rounded-full border-2"}`}
+          className={`m-2 p-2 ${deviceSize && "rounded-full border-2 opacity-75 hover:opacity-100"}`}
           aria-label="twitter-share"
           href={twitterShare}
           onClick={() =>
@@ -98,13 +98,13 @@ const SocialShare = () => {
             )
           }
           target="popup"
-          title="Share on Twitter"
+          title="Compartilhar no Twitter"
         >
           <AiFillTwitterCircle className="text-[26px]" />
         </a>
         <a
         
-          className={`m-2 p-2 ${deviceSize && "rounded-full border-2"}`}
+          className={`m-2 p-2 ${deviceSize && "rounded-full border-2 opacity-75 hover:opacity-100"}`}
           aria-label="linkedin-share"
           href={linkedinShare}
           onClick={() =>
@@ -114,17 +114,17 @@ const SocialShare = () => {
               "linkedin_share_clicked"
             )
           }
-          title="Share on Linkedin"
+          title="Compartilhar no Linkedin"
           target="popup"
         >
           <BsLinkedin className="text-[23px]" />
         </a>
         <button
-          className={`m-2 p-2 ${deviceSize && "rounded-full border-2"}`}
+          className={`m-2 p-2 ${deviceSize && "rounded-full border-2 opacity-75 hover:opacity-100"}`}
           name="copy-link"
           aria-label="copy-link"
           onClick={copyLink}
-          title="Copy Link"
+          title="Copiar link"
         >
           <BsLink45Deg className="text-[26px]" />
         </button>
@@ -138,7 +138,7 @@ const SocialShare = () => {
         )}
         role="alert"
       >
-        <strong className="font-bold">Link Copied</strong>
+        <strong className="font-bold">Link copiado</strong>
         <span className="pl-5">
           <BsXLg className="pt-1 text-[18px] cursor-pointer" />
         </span>

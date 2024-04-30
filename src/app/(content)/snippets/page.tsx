@@ -26,7 +26,7 @@ const Snippets = async () => {
           title
           className="mb-8 mt-10 dark:text-appRed-100 text-appBlue-100"
         >
-          Snippets 🚀 
+          Snippets
         </Text>
         <div className="flex flex-wrap">
           {

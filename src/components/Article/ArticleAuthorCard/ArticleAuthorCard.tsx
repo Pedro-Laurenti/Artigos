@@ -30,9 +30,9 @@ const ArticleAuthorCard = ({ author}: { author: IAuthor}) => {
               <div className="m-4 mr-4 mb-4 ml-0">
                 <Link
                   href={`/author/${author?.slug?.current}`}
-                  className="w-auto h-auto text-sm py-3 px-4 text-center dark:bg-appPurple-100 bg-appRed-100 rounded-full mx-auto text-white font-bold hover:!text-white dark:hover:!text-slate-400 transition-all transform hover:scale-105 md:px-10"
+                  className="w-auto h-auto text-sm py-3 px-4 text-center dark:bg-appBlue-100 bg-appRed-100 rounded-full mx-auto text-white font-bold hover:!text-white dark:hover:!text-slate-400 transition-all transform hover:scale-105 md:px-10"
                 >
-                  View All My Articles
+                  Todos os artigos do autor
                   
                 </Link>
               </div>
@@ -40,7 +40,7 @@ const ArticleAuthorCard = ({ author}: { author: IAuthor}) => {
                 <Link
                   href={`/author/profiles/${author?.slug?.current}`}
                   className="
-                                w-auto h-auto text-sm py-3 px-4 text-center dark:bg-appRed-100 bg-appPurple-100 rounded-full mx-auto text-white font-bold hover:!text-white dark:hover:!text-slate-400 transition-all transform hover:scale-105 md:px-10"
+                                w-auto h-auto text-sm py-3 px-4 text-center dark:bg-appRed-100 bg-appBlue-100 rounded-full mx-auto text-white font-bold hover:!text-white dark:hover:!text-slate-400 transition-all transform hover:scale-105 md:px-10"
                 >
                   View All My Profiles
                 </Link>

@@ -4,6 +4,7 @@ import { META_DESCRIPTION, META_SEO_KEYWORDS } from "@/constants/_APP_SETUP";
 import { SanityDocument } from "@sanity/client";
 import { getAboutQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
+import { Flow } from "@/components";
 
 export const metadata: Metadata = {
     title: "About",
@@ -27,7 +28,7 @@ const About = async () => {
                         <>
                             <Text
                                 title
-                                className='text-appPurple-100 dark:text-appRed-100'
+                                className='text-appBlue-100 dark:text-appRed-100'
                             >
                                 {getFirstAbout?.title}
                             </Text>
@@ -36,6 +37,7 @@ const About = async () => {
                                 <ArticleContent
                                     ARTICLE_CONTENT={getFirstAbout?.body}
                                 />
+                                <Flow />
                             </div>
                         </>
                     )}

@@ -7,18 +7,18 @@ export default defineType({
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
+      title: 'Título',
       type: 'string',
     }),
     defineField({
       name: 'url',
-      title: 'GitHub Link',
+      title: 'Link Github',
       type: 'url',
     }),
     
     defineField({
         name: 'publishedAt',
-        title: 'Published at',
+        title: 'Data de publicação',
         type: 'datetime',
       }),
   ],

@@ -1,6 +1,6 @@
 "use client"
 import React, { RefObject } from "react";
-
+import Link from "next/link";
 import classes from "./ArticleDetails.module.scss";
 import { combineClasses } from "@/utils/utils";
 import {
@@ -48,9 +48,16 @@ const Blog = ({ post, relatedPosts, isSnippet,isSeries }: any) => {
             </article>
             <Seperator />
             <p className="my-8 text-lg text-center">
-              Hope this helps, Save and Share <br /> If you have any doubts ask in
-              the comments below 👇.
+              Gostou? <br /> Saiba como ter o seu artigo publicado:
             </p>
+            <div className="w-full flex items-center">
+              <Link
+                href={"/sobre"}
+                className="w-auto h-auto text-sm py-3 px-10 text-center dark:bg-slate-800 bg-appBlue-100 dark:bg-appBlue-50 rounded-full mx-auto text-white font-bold hover:!text-white dark:hover:!text-slate-400 transition-all transform hover:scale-105"
+              >
+                Sobre
+              </Link>
+            </div>
             <Seperator />
             
             <div className={combineClasses(classes.author_and_more, "mx-auto")}>
@@ -64,7 +71,7 @@ const Blog = ({ post, relatedPosts, isSnippet,isSeries }: any) => {
             </div>
           </div>
 
-          <button className="fixed bottom-0 py-10 px-40" onClick={scrollToTop}>
+          <button className="fixed right-2 bottom-0 m-2 p-3 rounded-full border-2 bg-appGray-100 opacity-75 hover:opacity-100" onClick={scrollToTop}>
             <AiOutlineArrowUp className="text-[26px]" />
           </button>
         </div>

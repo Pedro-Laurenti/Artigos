@@ -2,37 +2,40 @@ import { defineField, defineType } from "sanity";
 
 export default defineType({
   name: "author",
-  title: "Author",
+  title: "Autor",
   type: "document",
   fields: [
     defineField({
       name: "name",
-      title: "Name",
+      title: "Nome",
       type: "string",
     }),
 
     defineField({
       name: "slug",
       title: "Slug",
+      description: "A URL (ou rota) do conteúdo",
       type: "slug",
       options: {
-        source: "name",
+        source: "title",
         maxLength: 96,
       },
     }),
+
     defineField({
       name: "designation",
-      title: "Designation",
+      title: "Designação",
       type: "string",
     }),
     defineField({
       name: "meta_description",
-      title: "Meta Description",
+      title: "Descrição Meta",
+      description: "Resumo do conteúdo que aparece na página de pesquisa do Google",
       type: "text",
     }),
     defineField({
       name: "profiles",
-      title: "Profiles",
+      title: "Perfis",
       type: "array",
       of: [
         {
@@ -59,7 +62,7 @@ export default defineType({
     }),
     defineField({
       name: "image",
-      title: "Image",
+      title: "Imagem",
       type: "image",
       options: {
         hotspot: true,
@@ -68,13 +71,13 @@ export default defineType({
         {
           name: "alt",
           type: "string",
-          title: "Alternative Text",
+          title: "Texto alternativo",
         },
       ],
     }),
     defineField({
       name: "about",
-      title: "Full About",
+      title: "Bio completa",
       type: "blockContent",
     }),
   ],

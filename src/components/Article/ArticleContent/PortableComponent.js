@@ -26,14 +26,14 @@ const articePortableText = {
         const targ = !value?.href?.startsWith('/') ? '_blank' : undefined
         return (
           !value?.href?.startsWith('/') ?
-            <a href={value.href} rel={rel} target={targ} className="text-appPurple-100 dark:text-appRed-100 text-decoration-underline" aria-label={`${children}`}>
+            <a href={value.href} rel={rel} target={targ} className="text-appBlue-100 dark:text-appRed-100 text-decoration-underline" aria-label={`${children}`}>
               {children}
-            </a> : <Link href={value.href} className="text-appPurple-100 dark:text-appRed-100 text-decoration-underline">{children}</Link>
+            </a> : <Link href={value.href} className="text-appBlue-100 dark:text-appRed-100 text-decoration-underline">{children}</Link>
         )
       },
       strong: ({ children }) => <strong className="font-semibold">{children}</strong>,
       emphasis: ({ children }) => <em className="font-italic">{children}</em>,
-      code: ({ children }) => <span className="font-mono leading-normal bg-opacity-15 bg-gray-300 dark:text-appPurple-100 text-appRed-100 rounded-md text-sm px-1 py-2 font-bold"
+      code: ({ children }) => <span className="font-mono leading-normal bg-opacity-15 bg-gray-300 dark:text-appBlue-100 text-appRed-100 rounded-md text-sm px-1 py-2 font-bold"
       
       >
         {children}

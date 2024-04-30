@@ -2,17 +2,17 @@ import { defineField, defineType } from "sanity";
 
 export default defineType({
   name: "contact",
-  title: "Contact",
+  title: "Contato",
   type: "document",
   fields: [
     defineField({
       name: "title",
-      title: "Title",
+      title: "Título",
       type: "string",
     }),
     defineField({
       name: "body",
-      title: "Body",
+      title: "Conteúdo",
       type: "blockContent",
     }),
     

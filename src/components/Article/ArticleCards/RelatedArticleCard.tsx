@@ -68,7 +68,7 @@ const RelatedArticleCard = ({ article, path,isExternal }: IProp) => {
                                         {estimatedReadingTime
                                             ? estimatedReadingTime
                                             : "2"}{" "}
-                                        mins
+                                        minutos
                                     </span>{" "}
                                 </>
                             )}
@@ -83,7 +83,7 @@ const RelatedArticleCard = ({ article, path,isExternal }: IProp) => {
                             >
                                 <h1
                                     className={
-                                        "cursor-pointer text-[16px] font-bold tracking-wide transition-colors duration-300 hover:text-appPurple-100 md:text-[22px]"
+                                        "cursor-pointer text-[16px] font-bold tracking-wide transition-colors duration-300 hover:text-appBlue-100 md:text-[22px]"
                                     }
                                 >
                                     {title}
@@ -93,7 +93,7 @@ const RelatedArticleCard = ({ article, path,isExternal }: IProp) => {
                             <Link href={path}>
                                 <h1
                                     className={
-                                        "cursor-pointer text-[16px] font-bold tracking-wide transition-colors duration-300 hover:text-appPurple-100 md:text-[22px]"
+                                        "cursor-pointer text-[16px] font-bold tracking-wide transition-colors duration-300 hover:text-appBlue-100 md:text-[22px]"
                                     }
                                 >
                                     {title}

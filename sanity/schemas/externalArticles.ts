@@ -2,12 +2,12 @@ import { defineField, defineType } from "sanity";
 
 export default defineType({
   name: "externalArticles",
-  title: "External Articles",
+  title: "Artigos externos",
   type: "document",
   fields: [
     defineField({
       name: "title",
-      title: "Title",
+      title: "Título",
       type: "string",
     }),
     defineField({

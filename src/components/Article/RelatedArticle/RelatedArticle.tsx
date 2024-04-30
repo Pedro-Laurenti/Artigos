@@ -15,8 +15,8 @@ const RelatedArticles: React.FC<RelatedArticleProps> = ({
         <>
             <div className='container mx-auto mt-20 px-0 lg:px-[15px]'>
                 <div className={"flex flex-wrap"}>
-                    <h1 className='mb-5 w-full px-3 text-xl font-bold text-appPurple-100 dark:text-appRed-100 md:text-3xl'>
-                        READ MORE {isSnippet ? "SNIPPETS" : "ARTICLES"}
+                    <h1 className='mb-5 w-full px-3 text-xl font-bold text-appBlue-100 dark:text-appRed-100 md:text-3xl'>
+                        Leia mais {isSnippet ? "SNIPPETS" : "ARTIGOS"}
                     </h1>
                     <hr className='border-1 mx-auto mb-5 w-[98%]' />
                     {!isSnippet && relatedPosts?.length
@@ -29,7 +29,7 @@ const RelatedArticles: React.FC<RelatedArticleProps> = ({
                                       isExternal={false}
                                       previousPost={false}
                                       isSeries={false}
-                                      path={`/articles/${each.slug.current}`}
+                                      path={`/artigos/${each.slug.current}`}
                                   />
                               ))
                         : null}
@@ -55,7 +55,7 @@ const RelatedArticles: React.FC<RelatedArticleProps> = ({
                                       isExternal={false}
                                       previousPost={false}
                                       isSeries={true}
-                                      path={`/articles/${each.slug.current}`}
+                                      path={`/artigos/${each.slug.current}`}
                                   />
                               ))
                         : null} */}
@@ -70,7 +70,7 @@ const RelatedArticles: React.FC<RelatedArticleProps> = ({
                                 isExternal={false}
                                 previousPost={true}
                                 isSeries={true}
-                                path={`/articles/${relatedPosts?.perviousPost?.slug.current}`}
+                                path={`/artigos/${relatedPosts?.perviousPost?.slug.current}`}
                             />
                         )} */}
 
@@ -78,9 +78,7 @@ const RelatedArticles: React.FC<RelatedArticleProps> = ({
                         !isSnippet &&
                         relatedPosts.length === 0 && (
                             <p className={"mb-0 px-3 md:mb-3"}>
-                                Currently, there are no articles available in
-                                this series. Stay tuned for upcoming updates and
-                                exciting content!
+                                Atualmente, não há artigos disponíveis nesta série. Fique ligado para próximas atualizações!
                             </p>
                         ))}
 

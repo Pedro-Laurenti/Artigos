@@ -2,18 +2,19 @@ import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'series',
-  title: 'Series',
+  title: 'Séries',
   type: 'document',
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
+      title: 'Título',
       type: 'string',
     }),
     
     defineField({
       name: "slug",
       title: "Slug",
+      description: "A URL (ou rota) do conteúdo",
       type: "slug",
       options: {
         source: "title",
@@ -22,19 +23,20 @@ export default defineType({
     }),
     defineField({
       name: "author",
-      title: "Author",
+      title: "Autor",
       type: "reference",
       to: { type: "author" },
     }),
     defineField({
       name: "meta_description",
-      title: "Meta Description",
+      title: "Descrição Meta",
+      description: "resumo do conteúdo que aparece na página de pesquisa do Google",
       type: "text",
     }),
    
     defineField({
       name: "categories",
-      title: "Categories",
+      title: "Categorias",
       type: "array",
       of: [{ type: "reference", to: { type: "category" } }],
     }),
@@ -46,7 +48,7 @@ export default defineType({
     }),
     defineField({
       name: "mainImage",
-      title: "Main image",
+      title: "Imagem principal",
       type: "image",
       options: {
         hotspot: true,
@@ -55,18 +57,18 @@ export default defineType({
         {
           name: "alt",
           type: "string",
-          title: "Alternative Text",
+          title: "Texto alternativo",
         },
       ],
     }),
     defineField({
       name: "body",
-      title: "Body",
+      title: "Conteúdo",
       type: "blockContent",
     }),
     defineField({
         name: 'publishedAt',
-        title: 'Published at',
+        title: 'Data de publicação',
         type: 'datetime',
       }),
       

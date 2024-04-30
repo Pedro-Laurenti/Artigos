@@ -11,12 +11,17 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import Image from "next/image";
-
 import LogoDark from "@publ/logo-dark.svg";
 import LogoWhite from "@publ/logo-white.svg";
 import favIcon from "@publ/images/1-1-favicon.svg"
 
 const Navbar = () => {
+
+  // Togle menu
+  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // header animation scroll
 
   const [isTransparent, setIsTransparent] = useState(true);
 
@@ -36,6 +41,7 @@ const Navbar = () => {
     };
   }, []);
 
+  // Dark mode switch
 
   const { theme, setTheme } = useTheme();
   const [showSearch, setShowSearch] = useState(false);

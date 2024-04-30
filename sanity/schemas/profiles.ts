@@ -2,22 +2,23 @@ import { defineField, defineType } from "sanity";
 
 export default defineType({
   name: "profiles",
-  title: "Profiles",
+  title: "Perfis",
   type: "document",
   fields: [
     defineField({
       name: "name",
-      title: "name",
+      title: "Nome",
       type: "string",
     }),
     defineField({
       name: "url",
-      title: "Url",
+      title: "URL",
       type: "string",
     }),
     defineField({
       name: "meta_description",
-      title: "Meta Description",
+      title: "Descrição Meta",
+      description: "resumo do conteúdo que aparece na página de pesquisa do Google",
       type: "text",
     }),
   ],

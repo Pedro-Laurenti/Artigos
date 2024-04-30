@@ -9,7 +9,7 @@ import { sanityFetch } from "@/sanity/lib/sanityFetch";
 export const metadata: Metadata = {
     title: "Séries",
     description: `Acompanhe nossas explorações detalhadas sobre terapia infantil, desenvolvimento emocional e muito mais.`,
-    keywords: "séries de terapia infantil amorosa, terapia infantil, desenvolvimento emocional, exploração detalhada",
+    keywords: "séries de terapia infantil, terapia infantil, desenvolvimento emocional, exploração detalhada",
 };
 
 const Series = async () => {

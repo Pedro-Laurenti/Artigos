@@ -19,7 +19,7 @@ const ProfileLink = ({ name, index, url }: ProfileLinksType) => {
                         aria-label={`${url}`}
                         target='_blank'
                         rel='noopener noreferrer'
-                        className='text-appPurple-100 dark:text-appRed-100'
+                        className='text-appBlue-100 dark:text-appRed-100'
                     >
                         {url}
                     </a>

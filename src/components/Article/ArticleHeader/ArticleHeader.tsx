@@ -48,9 +48,9 @@ const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet }: any) => {
                     </div>{" "}
                 </div>
                 <div className='m-5 text-slate-400'>
-                    <p>{format(new Date(publishedAt), "MMMM d, yyyy")}</p>
+                    <p>{format(new Date(publishedAt), "dd / MM / yyyy")}</p>
                 </div>
-                <div className='ml-5 text-slate-400'>📖 {estimatedReadingTime ? estimatedReadingTime : '2'} mins</div>
+                <div className='ml-5 text-slate-400'>📖 {estimatedReadingTime ? estimatedReadingTime : '2'} minutos</div>
             </div>
             {!isSnippet && (
                 <ArticleImage
@@ -72,10 +72,10 @@ const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet }: any) => {
                 {!isSnippet && series !== null && (
                     <div className='text-[14px] m-1 md:text-lg'>
                         <p>
-                            <span>SERIES ---{">"}</span>
+                            <span>Séries:</span>
                             <Link
                                 href={"/series/"+series?.slug?.current}
-                                className='text-appPurple-100 dark:text-appRed-100'
+                                className='text-appBlue-100 dark:text-appBlue-50'
                             >
                                 {series?.title}
                             </Link>
@@ -85,9 +85,9 @@ const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet }: any) => {
 
                 <div className='text-[14px] m-1 md:text-lg'>
                     <p>
-                        <span>Last Updated ---{">"}</span>
-                        <span className='text-appPurple-100 dark:text-appRed-100'>
-                            {format(new Date(_updatedAt), "MMMM d, yyyy")}
+                        <span>Última atualização: </span>
+                        <span className='text-appBlue-100 dark:text-appBlue-50'>
+                            {format(new Date(_updatedAt), "dd / MM / yyyy")}
                         </span>
                     </p>
                 </div>

@@ -21,8 +21,8 @@ const allTypesContent: ContentType[] = [
     url: "/categorias",
   },
   {
-    name: "Coleções",
-    url: "/colecoes",
+    name: "Séries",
+    url: "/series",
   },
   
 ];

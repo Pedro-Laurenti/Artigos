@@ -9,7 +9,7 @@ const Loader = () => {
                 <span className='circle animate-loader animation-delay-400 dark:bg-appBlue-100'></span>
             </div>
             
-            <h2 className='text-2xl'>Carregando...</h2>
+            <h2 className='text-2xl mt-6'>Carregando...</h2>
         </div>
     );
 };

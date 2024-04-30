@@ -9,7 +9,7 @@ const ContentsTypeTab = () => {
   return (
     <>
       <div className="mt-10 mb-10">
-        <ul className="flex flex-row flex-nowrap content-center justify-start items-center overflow-x-scroll md:flex-wrap md:justify-around md:overflow-x-hidden">
+        <ul className="flex flex-row flex-nowrap content-center justify-start items-center md:flex-wrap md:justify-around">
           {allTypesContent.map((content, index) => {
             const isActive = pathname === content.url;
 
@@ -18,7 +18,7 @@ const ContentsTypeTab = () => {
               : "";
 
             return (
-              <li className={`px-4 rounded-md pb-2 hover:text-appGray-100 hover:bg-appBlue-100 hover:shadow-lg shadow-none transition-all  md:mx-5 mx-2 transform hover:scale-105 w-auto text-2xl font-bold cursor-pointer ${linkClass}`} key={index}>
+              <li className={`px-4 rounded-md p-2 hover:text-appGray-100 hover:bg-appBlue-100 hover:shadow-lg shadow-none transition-all  md:mx-5 mx-2 transform hover:scale-105 w-auto text-2xl font-bold cursor-pointer ${linkClass}`} key={index}>
                 <Link className="hover:text-white" href={content.url}>{content.name}</Link>
               </li>
             );

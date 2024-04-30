@@ -137,16 +137,70 @@ hr {
 }
 
 .purple-color{
-  color: #7868E6;
+  color: #1d8ea7;
 }
 .bg-purple-color{
-  background-color: #7868E6;
+  background-color: #1d8ea7;
 }
 
 .reading-progress-bar {
   position: fixed;
   height: 6px;
   top: 0;
-  background-color: #ff0000;
   z-index: 900;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --B1: #0095A5;
+    --B2: #095F68;
+    --B3: #171E46;
+    --B4: #0B131A;
+
+    --R1: #BC000A;
+    --Y1: #E8B100;
+    --G1: #008E2B;
+
+
+    --BL1: #4e4e4e;
+    --BL2: #737373;
+    --BL3: #efefef;
+    --BL4: #FEFEFE;
+
+    /* TRANSPARENCY */
+
+    --BL4-T: #fefefe6b;
+}
+
+*{
+    transition: 0.2s;
+}
+/* BARRA DE ROLAGEM */
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 7px
+}
+
+::-webkit-scrollbar-track {
+    background: var(--BL4);
+    margin: 5px 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--BL2);
+    border-radius: 25px;
+}
+
+::-moz-scrollbar {
+    width: 1px;
+}
+
+::-moz-scrollbar-track {
+    background: var(--BL3);
+}
+
+::-moz-scrollbar-thumb {
+    background: var(--BL2);
 }

@@ -81,7 +81,7 @@ const ArticleCard = ({ article, path, isExternal }: IProp) => {
               >
                 <h1
                   className={
-                    "text-[16px] font-bold cursor-pointer tracking-wide hover:text-appPurple-100 transition-colors duration-300 md:text-[22px]"
+                    "text-[16px] font-bold cursor-pointer tracking-wide hover:text-appBlue-100 transition-colors duration-300 md:text-[22px]"
                   }
                 >
                   {title}
@@ -91,7 +91,7 @@ const ArticleCard = ({ article, path, isExternal }: IProp) => {
               <Link href={path}>
                 <h1
                   className={
-                    "text-[16px] font-bold cursor-pointer tracking-wide hover:text-appPurple-100 transition-colors duration-300 md:text-[22px]"
+                    "text-[16px] font-bold cursor-pointer tracking-wide hover:text-appBlue-100 transition-colors duration-300 md:text-[22px]"
                   }
                 >
                   {title}

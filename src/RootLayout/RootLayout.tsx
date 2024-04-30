@@ -1,6 +1,7 @@
 "use client"
 import { ThemeProvider } from "next-themes";
 import { Footer , Navbar } from '@/components';
+import { Ninja }  from '@/components';
 
 export default function RootLayout({
   children,
@@ -12,6 +13,7 @@ export default function RootLayout({
   return (
    
     <ThemeProvider enableSystem={true} attribute="class">
+      <Ninja />
             
       <div className="flex-grow">
         <Navbar />

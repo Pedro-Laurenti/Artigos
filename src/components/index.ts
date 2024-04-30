@@ -25,3 +25,5 @@ export const ProfileLink=dynamic(()=>import('./ProfileLink/ProfileLink'))
 export const GitHubComment = dynamic(()=>import('./GitHubComment/GitHubComment'))
 
 export const Flow = dynamic(()=>import('./Flow/Flow'))
+
+export const Ninja = dynamic(()=>import('./Nin/Nin'))

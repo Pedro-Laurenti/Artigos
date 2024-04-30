@@ -25,7 +25,7 @@ export const metadata: Metadata = {
             height: 700,
           },
           {
-            url: './blog-banner.png',
+            url: '/blog-banner.png',
             width: 1800,
             height: 1600,
             alt: 'Artigos Therapies Love Kids',

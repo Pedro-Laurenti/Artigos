@@ -20,12 +20,12 @@ export const metadata: Metadata = {
         siteName: WEBSITE_NAME,
         images: [
           {
-            url: '/opengraph-image.png',
+            url: './opengraph-image.png',
             width: 1400,
             height: 700,
           },
           {
-            url: '/opengraph-image.png',
+            url: './opengraph-image.png',
             width: 1800,
             height: 1600,
             alt: 'Artigos Therapies Love Kids',

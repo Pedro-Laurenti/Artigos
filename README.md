@@ -4,7 +4,7 @@ A revista científica **"Artigos TLK"** é uma plataforma desenvolvida pela Ther
 
 ## 2. Fluxo de Usuários
 
-- **Submissão de Artigos:** Através das redes sociais e de estratégias de marketing, os interessados são direcionados à página principal do portal, onde têm acesso a um tutorial detalhado sobre como submeter artigos. Pesquisadores e profissionais da área da saúde que já colaboram com a TLK são especialmente convidados a compartilhar seus trabalhos.
+- **Submissão de Artigos:** Através das redes sociais e de estratégias de marketing, os interessados são direcionados à página principal do portal, onde têm acesso a um tutorial detalhado como submeter artigos. Pesquisadores e profissionais da área da saúde que já colaboram com a TLK são especialmente convidados a compartilhar seus trabalhos.
 - **Revisão e Publicação:** Todos os artigos submetidos passam pelo processo de revisão por uma banca. Após essa análise criteriosa, os artigos aprovados são publicados na revista e disponibilizados para acesso público.
 - **Exploração de Conteúdo:** Os usuários têm a oportunidade de explorar os diversos conteúdos oferecidos pela revista. Além disso, podem participar de discussões em tempo real através da sessão de comentários, contribuindo para o desenvolvimento de teses e fortalecendo a comunidade científica unificada que a TLK busca construir.
 

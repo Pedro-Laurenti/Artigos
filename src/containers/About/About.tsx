@@ -45,7 +45,7 @@ const About : React.FC<AboutProps> = ({
                 <AboutCard
                   about={each}
                   key={i + each._id}
-                  path={`/about/${each.slug.current}`}
+                  path={`/sobre/${each.slug.current}`}
                 />
               ))
           : null}

@@ -29,9 +29,18 @@ const ArticleCard = ({ article, path, isExternal }: IProp) => {
       asset: { _ref },
     },
   } = article;
-  const readTime = readingTime(body ? body :[]);
 
-  console.log()
+  // Verifica se publishedAt é uma data válida antes de formatá-la
+  const formattedPublishedAt = isValidDate(publishedAt) ? format(new Date(publishedAt), "d - MM - yyyy") : "";
+
+  // Função para verificar se uma data é válida
+  const isValidDate = (date: any) => {
+    return date instanceof Date && !isNaN(date.getTime());
+  };
+
+  // Calcula o tempo de leitura
+  const readTime = readingTime(body ? body : []);
+
   return (
     <div
       className={"w-full lg:w-1/3 md:w-1/2 md:px-[15px] px-2 mb-[30px] h-fit"}
@@ -60,7 +69,7 @@ const ArticleCard = ({ article, path, isExternal }: IProp) => {
               className={"font-bold text-xs pt-3 mb-0 md:mb-3 text-appBlue-100 dark:text-appBlue-50"}
             >
               <span className="pr-1">
-              {format(new Date(publishedAt), "d - MM - yyyy")}
+              {formattedPublishedAt}
               </span>{" "}
               {readTime.text !== "0 min read" && (
                 <>

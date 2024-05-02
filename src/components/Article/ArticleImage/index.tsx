@@ -2,10 +2,10 @@ import classes from "./Images.module.scss";
 import { ImageSize } from "@/shared/enums";
 import { combineClasses } from "@/utils/utils";
 import { urlFor } from "@/utils/sanity-utils";
-
 import Image from "next/legacy/image";
+
 interface IArticleImage {
-    src: string;
+    src?: string; // Torna a propriedade src opcional
     caption?: string;
     size?: ImageSize;
     alt?: string;
@@ -13,8 +13,9 @@ interface IArticleImage {
     imageWidth?: number;
     imageHeight?: number;
 }
+
 const ImageArticle = ({
-    src,
+    src = "", // Define um valor padrão para src
     caption,
     size = ImageSize.DEFAULT,
     alt,
@@ -22,6 +23,18 @@ const ImageArticle = ({
     imageWidth,
     imageHeight,
 }: IArticleImage) => {
+    // Verifica se src está definido antes de renderizar a imagem
+    const renderImage = src && (
+        <Image
+            alt={alt}
+            loading='lazy'
+            src={`${urlFor(src)}`}
+            objectFit='contain'
+            height={imageHeight}
+            width={imageWidth}
+        />
+    );
+
     return (
         <div
             className={combineClasses(
@@ -32,14 +45,7 @@ const ImageArticle = ({
                 "display-block mx-auto"
             )}
         >
-            <Image
-                alt={alt}
-                loading='lazy'
-                src={`${urlFor(src)}`}
-                objectFit='contain'
-                height={imageHeight}
-                width={imageWidth}
-            />
+            {renderImage}
             {caption && (
                 <p
                     className={combineClasses(

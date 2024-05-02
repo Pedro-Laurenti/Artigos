@@ -1,28 +1,19 @@
 import { groq } from "next-sanity";
 
 // About
-
 export const aboutPathsQuery = groq`*[_type == "about" && defined(slug.current)][]{
   "params": { "slug": slug.current }
-}`;
-
-export const aboutQuery = groq `* [_type == "about"]{
-  _createdAt,
-  _updatedAt,
-title,
-body,
-slug,
-saibaComoParticipar,
-publishedAt,
 }`;
 
 export const aboutsQuery = groq `* [_type == "about"]{
   _createdAt,
   _updatedAt,
+  publishedAt,
 title,
 body,
 slug,
 saibaComoParticipar,
+"author": author -> {name,slug,image,designation,profiles,bio,about},
 publishedAt,
 }`;
 
@@ -403,7 +394,7 @@ export const getProfilesQuery = groq`*[_type == "profiles"]{
 
 // ======================== About ================================
 
-export const getAboutQuery = groq`*[_type == "about"]{
+export const getAboutsQuery = groq`*[_type == "about"]{
     title,
     body,
     meta_description,

@@ -5,6 +5,7 @@ import {
     getSeriesQuery,
     getLegalsQuery,
     snippetsQuery,
+    aboutsQuery
 } from "@/sanity/lib/queries";
 import { createClient} from "next-sanity";
 import clientConfig from "@/utils/sanity-client-config";
@@ -41,6 +42,13 @@ export default async function sitemap() {
         lastModified: snippet?.updatedAt,
     }));
 
+    const abouts = await createClient(clientConfig).fetch(aboutsQuery)
+
+    const AboutsUrls = abouts.map((about) => ({
+        url: `${baseUrl}/sobre/${about?.slug?.current}`,
+        lastModified: about?.updatedAt,
+    }));
+
     const legals = await createClient(clientConfig).fetch(getLegalsQuery)
     const legalsUrls = legals.map((legal) => ({
         url: `${baseUrl}/legal/${legal?.slug?.current}`,
@@ -63,6 +71,7 @@ export default async function sitemap() {
         ...authorsUrls,
         ...seriesUrls,
         ...snippetsUrls,
+        ...AboutsUrls,
         ...legalsUrls,
     ];
 }

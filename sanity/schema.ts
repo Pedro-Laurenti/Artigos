@@ -14,5 +14,5 @@ import about from './schemas/about'
 import externalArticles from './schemas/externalArticles'
 import contact from './schemas/contact'
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [post, author, legal,category, contact,profiles,blockContent,tags,series,openSource,snippet ,about,externalArticles],
+  types: [post,author,legal,category,contact,profiles,blockContent,tags,series,openSource,snippet,about,externalArticles],
 }

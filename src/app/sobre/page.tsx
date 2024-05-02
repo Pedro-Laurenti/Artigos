@@ -3,7 +3,7 @@ import { About as AboutContainer } from "@/containers";
 import {WEBSITE_NAME} from '@/constants/_APP_SETUP'
 import { Metadata } from "next";
 import { SanityDocument } from "@sanity/client";
-import { aboutQuery } from "@/sanity/lib/queries";
+import { aboutsQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 export const metadata: Metadata = {
   title:'Sobre',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const About = async () => {
    const allAbout = await sanityFetch<SanityDocument>({
-        query: aboutQuery,
+        query: aboutsQuery,
     });
 
   return (

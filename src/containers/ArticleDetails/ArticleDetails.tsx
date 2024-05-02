@@ -13,7 +13,7 @@ import {
 } from "@/components";
 import { AiOutlineArrowUp } from "react-icons/ai";
 
-const Blog = ({ post, relatedPosts, isSnippet,isSeries }: any) => {
+const Blog = ({ post, relatedPosts, isSnippet, isSeries, isAbout }: any) => {
   const target: RefObject<HTMLDivElement> = React.createRef();
   const authorInfo=post.author
   const isBrowser = () => typeof window !== 'undefined';
@@ -41,7 +41,7 @@ const Blog = ({ post, relatedPosts, isSnippet,isSeries }: any) => {
               )}
               ref={target}
             >
-              <ArticleHeader ARTICLE_DETAILS={post} isSnippet={isSnippet} />
+              <ArticleHeader ARTICLE_DETAILS={post} isSnippet={isSnippet} isAbout={isAbout} />
               <div>
                 <ArticleContent ARTICLE_CONTENT={post.body} />
               </div>
@@ -63,10 +63,11 @@ const Blog = ({ post, relatedPosts, isSnippet,isSeries }: any) => {
             <div className={combineClasses(classes.author_and_more, "mx-auto")}>
               
               <ArticelFooter
-              isSnippet={isSnippet}
-              authorInfo={authorInfo}
-              relatedPosts={relatedPosts}
-              isSeries={isSeries}
+                isSnippet={isSnippet}
+                authorInfo={authorInfo}
+                relatedPosts={relatedPosts}
+                isSeries={isSeries}
+                isAbout={isAbout}
               />
             </div>
           </div>

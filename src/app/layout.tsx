@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: any;}) {
 
   return (
-        <html lang="en">
+        <html lang="pt-BR">
              <body className="bg-slate-100 dark:bg-slate-900 transition-all flex flex-col min-h-screen h-auto">
                 <RootLayout>
                   {children}

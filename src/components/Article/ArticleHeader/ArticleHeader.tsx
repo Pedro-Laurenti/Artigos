@@ -7,9 +7,10 @@ import Image from "next/legacy/image";
 import { format } from "date-fns";
 import Link from "next/link";
 
-const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet }: any) => {
+const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet, isAbout }: any) => {
     const {
-        title, author,
+        title,
+        author,
         publishedAt,
         _updatedAt,
         mainImage,
@@ -34,36 +35,45 @@ const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet }: any) => {
             <div className='flex flex-wrap items-center justify-center text-base font-medium mt-8'>
                 <div className='m-5 flex flex-wrap items-center justify-evenly'>
                     <div>
-                       
-                        <Image
-                            src={`${urlFor(author?.image?.asset?._ref)}`}
-                            alt={author?.image?.alt}
-                            height={40}
-                            width={40}
-                            className='h-10 w-10 rounded-full'
-                        />
+                        {author?.image && (
+                            <Image
+                                src={`${urlFor(author.image.asset?._ref)}`}
+                                alt={author.image.alt}
+                                height={40}
+                                width={40}
+                                className='h-10 w-10 rounded-full'
+                            />
+                        )}
                     </div>
                     <div className='m-3 font-semibold'>
                         <p>{author?.name}</p>
                     </div>{" "}
                 </div>
                 <div className='m-5 text-slate-400'>
-                    <p>{format(new Date(publishedAt), "dd / MM / yyyy")}</p>
+                    {publishedAt && (
+                        <p>{format(new Date(publishedAt), "dd / MM / yyyy")}</p>
+                    )}
                 </div>
                 <div className='ml-5 text-slate-400'>📖 {estimatedReadingTime ? estimatedReadingTime : '2'} minutos</div>
             </div>
+
             {!isSnippet && (
-                <ArticleImage
-                    src={`${urlFor(mainImage?.asset?._ref)}`}
-                    alt={mainImage?.alt}
-                    imageWidth={mainImageWidth}
-                    imageHeight={mainImageHeight}
-                />
+                <>
+                    {mainImage && (
+                        <ArticleImage
+                            src={`${urlFor(mainImage?.asset?._ref)}`}
+                            alt={mainImage?.alt}
+                            imageWidth={mainImageWidth}
+                            imageHeight={mainImageHeight}
+                        />
+                    )}
+                </>
             )}
+
             {!isSnippet && (
                 <ArticleTags tags={tags} center={true} isLight={true} />
             )}
-
+            
             <div
                 className={combineClasses(
                     "flex flex-col flex-wrap justify-center text-center"
@@ -87,7 +97,9 @@ const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet }: any) => {
                     <p>
                         <span>Última atualização: </span>
                         <span className='text-appBlue-100 dark:text-appBlue-50'>
-                            {format(new Date(_updatedAt), "dd / MM / yyyy")}
+                        {_updatedAt && ( // Verifica se publishedAt está definido
+                            <p>{format(new Date(_updatedAt), "dd / MM / yyyy")}</p>
+                        )}
                         </span>
                     </p>
                 </div>

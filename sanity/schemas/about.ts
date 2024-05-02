@@ -2,7 +2,7 @@ import { defineField, defineType } from "sanity";
 
 export default defineType({
   name: "about",
-  title: "Sobre",
+  title: "About",
   type: "document",
   fields: [
     defineField({
@@ -28,8 +28,31 @@ export default defineType({
     defineField({
       name: "saibaComoParticipar",
       title: "Adicionar 'Saiba como participar'",
-      description: "Marque se deseja que apareça um tutorial no formato de fluxo sobre como publicar conteúdos na revista Artigos TLK",
+      description: "Marque se deseja que apareça um tutorial no formato de fluxo como publicar conteúdos na revista Artigos TLK",
       type: "boolean",
+      initialValue: false,
+    }),
+    defineField({
+      name: "author",
+      title: "Autor",
+      type: "reference",
+      to: { type: "author" },
+    }),
+    defineField({
+      name: 'publishedAt',
+      title: 'Data de publicação',
+      type: 'datetime',
     }),
   ],
+  preview: {
+    select: {
+      title: "title",
+      author: "author.name",
+      media: "mainImage",
+    },
+    prepare(selection) {
+      const { author } = selection;
+      return { ...selection, subtitle: author && `por ${author}` };
+    },
+  },
 });

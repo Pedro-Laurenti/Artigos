@@ -12,13 +12,13 @@ interface IProp {
     article: IArticleHeaderData;
     path: string;
     isExternal: boolean;
-    previousPost?:boolean;
-    isSeries:boolean
+    previousPost?: boolean;
+    isSeries: boolean;
 }
 
-const RelatedArticleCard = ({ article, path,isExternal }: IProp) => {
+const RelatedArticleCard = ({ article, path, isExternal }: IProp) => {
     // set url and path
-    
+
     const {
         // _createdAt,
         title,
@@ -26,14 +26,15 @@ const RelatedArticleCard = ({ article, path,isExternal }: IProp) => {
         tags,
         publishedAt,
         meta_description,
-
         estimatedReadingTime,
-        mainImage: {
-            alt,
-            asset: { _ref },
-        },
+        mainImage,
     } = article;
-    const readTime = readingTime(body ? body : []);
+
+    // Verifica se mainImage está definido antes de acessar alt
+    const alt = mainImage?.alt || "";
+
+    // Verifica se body está definido antes de calcular o tempo de leitura
+    const readTime = readingTime(body || []);
 
     return (
         <div
@@ -41,8 +42,6 @@ const RelatedArticleCard = ({ article, path,isExternal }: IProp) => {
                 "mb-[30px] h-fit w-full px-2 md:w-1/2 md:px-[15px] lg:w-1/2"
             }
         >
-          
-            
             <div
                 className={combineClasses(
                     classes.article_card,
@@ -57,7 +56,7 @@ const RelatedArticleCard = ({ article, path,isExternal }: IProp) => {
                             }
                         >
                             <span className='pr-1'>
-                                {format(new Date(publishedAt), "MMMM d, yyyy")}
+                                {format(new Date(publishedAt), "dd / MM / yyyy")}
                             </span>{" "}
                             {readTime.text !== "0 min read" && (
                                 <>

@@ -26,7 +26,7 @@ const Profiles = async () => {
             title
             className="mb-5 mt-10 dark:text-appRed-100 text-appPurple-100"
           >
-            Perfils
+            Perfis
           </Text>
 
           <div className="grid">

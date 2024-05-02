@@ -33,9 +33,9 @@ export const LinkTag: React.FC<TextEditorProps> = ({ children, value }) => {
     const targ = !value?.href?.startsWith('/') ? '_blank' : undefined
     return (
       !value?.href?.startsWith('/') ?
-        <a href={value.href} rel={rel} target={targ} aria-label={`${children}`}className="text-appBlue-100 dark:text-appRed-100 text-decoration-underline">
+        <a href={value.href} rel={rel} target={targ} aria-label={`${children}`}className="text-appBlue-100 dark:text-appBlue-50 text-decoration-underline">
           {children}
-        </a> : <Link href={value.href} className="text-appBlue-100 dark:text-appRed-100 text-decoration-underline">{children}</Link>
+        </a> : <Link href={value.href} className="text-appBlue-100 dark:text-appBlue-50 text-decoration-underline">{children}</Link>
     )
 }
 

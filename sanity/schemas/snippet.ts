@@ -38,7 +38,6 @@ export default defineType({
       type: "reference",
       to: { type: "author" },
     }),
-
     defineField({
       name: "body",
       title: "Conteúdo",

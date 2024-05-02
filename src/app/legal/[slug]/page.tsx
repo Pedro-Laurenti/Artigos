@@ -43,9 +43,9 @@ const Legal = async ({ params }: { params: { slug: string } }) => {
                     ) :(<>
                     <Text p className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-appPurple-100 dark:text-appRed-100'>
                         Criado à:{" "}
-                        {format(new Date(legal?._createdAt), "d - MM - yyyy")} |
+                        {format(new Date(legal?._createdAt), "dd / MM / yyyy")} |
                         Atualizado à:
-                        {format(new Date(legal?._updatedAt), "d - MM - yyyy")}
+                        {format(new Date(legal?._updatedAt), "dd / MM / yyyy")}
                     </Text>
 
                     <div className='grid'>

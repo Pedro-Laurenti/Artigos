@@ -46,6 +46,17 @@ export interface ISnippet {
   seo?: iSEO;
 }
 
+export interface IAboutHeaderData {
+  date: string;
+  title: string;
+}
+
+export interface IAbout {
+  path: string;
+  preview: IAboutHeaderData;
+  seo?: iSEO;
+}
+
 export interface IOpenSourceData {
   date: string;
   title: string;

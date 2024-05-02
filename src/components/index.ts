@@ -24,4 +24,6 @@ export const ProfileLink=dynamic(()=>import('./ProfileLink/ProfileLink'))
 
 export const GitHubComment = dynamic(()=>import('./GitHubComment/GitHubComment'))
 
+export const AboutCard = dynamic(()=>import('./AboutCard/AboutCard'))
+
 export const Flow = dynamic(()=>import('./Flow/Flow'))

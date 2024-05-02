@@ -1,50 +1,47 @@
-import { Text, ArticleContent } from "@/components";
+import { Text } from "@/components";
+import { About as AboutContainer } from "@/containers";
+import {WEBSITE_NAME} from '@/constants/_APP_SETUP'
 import { Metadata } from "next";
-import { META_DESCRIPTION, META_SEO_KEYWORDS } from "@/constants/_APP_SETUP";
 import { SanityDocument } from "@sanity/client";
-import { getAboutQuery } from "@/sanity/lib/queries";
+import { aboutQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
-import { Flow } from "@/components";
-
 export const metadata: Metadata = {
-    title: "About",
-    description: META_DESCRIPTION,
-    keywords: META_SEO_KEYWORDS,
+  title:'Sobre',
+  description: `Explore trechos de conteúdos já postados em ${WEBSITE_NAME}. Descubra dicas rápidas e insights para a sua jornada.`,
+  keywords: 'trechos de tecnologia, dicas rápidas, exemplos de código, insights de codificação',
 };
 
+
 const About = async () => {
-    const about = await sanityFetch<SanityDocument>({
-        query: getAboutQuery,
+   const allAbout = await sanityFetch<SanityDocument>({
+        query: aboutQuery,
     });
-    const getFirstAbout = about[0];
 
-    return (
-        <>
-            <section className='m-4 mt-20 dark:bg-slate-900 dark:text-white'>
-                <div className='container px-0 pb-[20px] pt-[10px] md:px-[15px]'>
-                    {about?.length === 0 ? (
-                        <p>Nenhuma informação encontrada</p>
-                    ) : (
-                        <>
-                            <Text
-                                title
-                                className='text-appBlue-100 dark:text-appRed-100'
-                            >
-                                {getFirstAbout?.title}
-                            </Text>
+  return (
+    <section className="container px-3 md:pb-20 md:pt-10 pt-20">
+      <div className="mt-19">
 
-                            <div className='grid'>
-                                <ArticleContent
-                                    ARTICLE_CONTENT={getFirstAbout?.body}
-                                />
-                                <Flow />
-                            </div>
-                        </>
-                    )}
-                </div>
-            </section>
-        </>
-    );
+        <Text
+          title
+          className="mb-8 mt-10 dark:text-appBlue-50 text-appBlue-100"
+        >
+          Sobre
+        </Text>
+        <div className="flex flex-wrap">
+          {
+            allAbout?.length > 0 ? (
+              <AboutContainer 
+                isArchive={false}
+                about={allAbout}
+                noOfAbout={9}
+         />
+            ) : <p>Nenhum Snippet encontrado</p>
+          }
+         
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default About;

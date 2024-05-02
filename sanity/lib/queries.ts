@@ -1,5 +1,31 @@
 import { groq } from "next-sanity";
 
+// About
+
+export const aboutPathsQuery = groq`*[_type == "about" && defined(slug.current)][]{
+  "params": { "slug": slug.current }
+}`;
+
+export const aboutQuery = groq `* [_type == "about"]{
+  _createdAt,
+  _updatedAt,
+title,
+body,
+slug,
+saibaComoParticipar,
+publishedAt,
+}`;
+
+export const aboutsQuery = groq `* [_type == "about"]{
+  _createdAt,
+  _updatedAt,
+title,
+body,
+slug,
+saibaComoParticipar,
+publishedAt,
+}`;
+
 // Snippets
 export const snippetPathsQuery = groq`*[_type == "snippet" && defined(slug.current)][]{
     "params": { "slug": slug.current }

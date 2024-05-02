@@ -1,19 +1,19 @@
 import { Text } from "@/components";
-import { About as AboutContainer } from "@/containers";
+import { Abouts as AboutsContainer } from "@/containers";
 import {WEBSITE_NAME} from '@/constants/_APP_SETUP'
 import { Metadata } from "next";
 import { SanityDocument } from "@sanity/client";
 import { aboutsQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 export const metadata: Metadata = {
-  title:'Sobre',
+  title:'About',
   description: `Explore trechos de conteúdos já postados em ${WEBSITE_NAME}. Descubra dicas rápidas e insights para a sua jornada.`,
   keywords: 'trechos de tecnologia, dicas rápidas, exemplos de código, insights de codificação',
 };
 
 
-const About = async () => {
-   const allAbout = await sanityFetch<SanityDocument>({
+const Abouts = async () => {
+   const allAbouts = await sanityFetch<SanityDocument>({
         query: aboutsQuery,
     });
 
@@ -29,13 +29,13 @@ const About = async () => {
         </Text>
         <div className="flex flex-wrap">
           {
-            allAbout?.length > 0 ? (
-              <AboutContainer 
+            allAbouts?.length > 0 ? (
+              <AboutsContainer 
                 isArchive={false}
-                about={allAbout}
+                abouts={allAbouts}
                 noOfAbout={9}
-         />
-            ) : <p>Nenhum Snippet encontrado</p>
+              />
+            ) : <p>Nenhum arquivo encontrado</p>
           }
          
         </div>
@@ -44,4 +44,4 @@ const About = async () => {
   );
 };
 
-export default About;
+export default Abouts;

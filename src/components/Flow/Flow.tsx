@@ -1,6 +1,6 @@
 
 
-export default function Sobre() {
+export default function Abouta() {
 
     return(
         <div className="w-full relative min-h-100vh flex flex-col items-center">

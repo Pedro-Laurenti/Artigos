@@ -21,16 +21,16 @@ export default defineType({
       },
     }),
     defineField({
-      name: "body",
-      title: "Conteúdo",
-      type: "blockContent",
+      name: "meta_description",
+      title: "Descrição Meta",
+      description: "resumo do conteúdo que aparece na página de pesquisa do Google",
+      type: "text",
     }),
     defineField({
-      name: "saibaComoParticipar",
-      title: "Adicionar 'Saiba como participar'",
-      description: "Marque se deseja que apareça um tutorial no formato de fluxo como publicar conteúdos na revista Artigos TLK",
-      type: "boolean",
-      initialValue: false,
+      name: "meta_tags",
+      title: "Tags da Meta",
+      description: 'Palavras buscáveis no Google - valores separados por vírgulas',
+      type: "string",
     }),
     defineField({
       name: "author",
@@ -39,9 +39,9 @@ export default defineType({
       to: { type: "author" },
     }),
     defineField({
-      name: 'publishedAt',
-      title: 'Data de publicação',
-      type: 'datetime',
+      name: "body",
+      title: "Conteúdo",
+      type: "blockContent",
     }),
   ],
   preview: {
@@ -56,3 +56,4 @@ export default defineType({
     },
   },
 });
+

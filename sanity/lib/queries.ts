@@ -1,21 +1,56 @@
 import { groq } from "next-sanity";
 
-// About
+// ======================== About ================================
+
 export const aboutPathsQuery = groq`*[_type == "about" && defined(slug.current)][]{
   "params": { "slug": slug.current }
 }`;
 
-export const aboutsQuery = groq `* [_type == "about"]{
+export const aboutQuery = groq`*[_type == "about" && slug.current == $slug][0]{
   _createdAt,
   _updatedAt,
-  publishedAt,
 title,
 body,
+isSeries,
+tags,
 slug,
-saibaComoParticipar,
+meta_description,
+"tags": tags[]-> {title},
 "author": author -> {name,slug,image,designation,profiles,bio,about},
+"series":series -> {title,slug},
+"category": categories[]-> {title,slug},
+publishedAt,
+
+
+}`;
+
+export const aboutsQuery = groq`*[_type == "about"]{
+  _createdAt,
+  _updatedAt,
+title,
+body,
+isSeries,
+tags,
+slug,
+meta_description,
+"tags": tags[]-> {title},
+"author": author -> {name,slug,image,designation,profiles,bio,about},
+"series":series -> {title,slug},
+"category": categories[]-> {title,slug},
 publishedAt,
 }`;
+export const getRandomAboutsQuery = groq`*[_type == "about"] | order(_createdAt asc){
+  _createdAt,
+  title,
+  body,
+  "author": author -> {name, slug, image},
+  meta_description,
+  mainImage,
+  slug,
+  "tags": tags[]-> {title, slug},
+  "category": categories[]-> {title, slug},
+  publishedAt,
+}[0..2]`;
 
 // Snippets
 export const snippetPathsQuery = groq`*[_type == "snippet" && defined(slug.current)][]{
@@ -390,14 +425,6 @@ export const getProfilesQuery = groq`*[_type == "profiles"]{
     url,
     meta_description,
 
-    }`;
-
-// ======================== About ================================
-
-export const getAboutsQuery = groq`*[_type == "about"]{
-    title,
-    body,
-    meta_description,
     }`;
 
 // ======================== Contact ================================

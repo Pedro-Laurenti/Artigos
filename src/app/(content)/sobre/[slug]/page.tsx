@@ -1,7 +1,7 @@
 import { ArticleDetails ,} from "@/containers";
 import { Metadata } from "next";
 import { SanityDocument } from "@sanity/client";
-import {  getAboutsQuery,aboutsQuery, } from "@/sanity/lib/queries";
+import { getRandomAboutsQuery,aboutQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 
 
@@ -13,7 +13,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await sanityFetch<SanityDocument>({
-    query: aboutsQuery,
+    query: aboutQuery,
     params,
 });
   if (!post)
@@ -30,25 +30,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 
-const BlogDetail = async ({ params }: { params: { slug: string } }) => {
-  // const post = await getSnippet(params.slug);
+const AboutsDetail = async ({ params }: { params: { slug: string } }) => {
+  // const post = await getAbout(params.slug);
   const post = await sanityFetch<SanityDocument>({
-    query: aboutsQuery,
+    query: aboutQuery,
     params,
 });
   const relatedPosts = await sanityFetch<SanityDocument>({
-    query: getAboutsQuery,
+    query: getRandomAboutsQuery,
     params,
 });
   return (
     <ArticleDetails
      post={post} 
      isSeries={false}
-     isSnippet={false}
-     isAbout={true}
-     relatedPosts={relatedPosts}
+     isSnippet={true}
+    relatedPosts={relatedPosts}
     />
   );
 };
 
-export default BlogDetail;
+export default AboutsDetail;

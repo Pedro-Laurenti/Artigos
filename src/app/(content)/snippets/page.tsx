@@ -32,10 +32,10 @@ const Snippets = async () => {
           {
             allSnippets?.length > 0 ? (
               <SnippetsContainer 
-         isArchive={false}
-         snippets={allSnippets}
-         noOfSnippet={9}
-         />
+                isArchive={false}
+                snippets={allSnippets}
+                noOfSnippet={9}
+              />
             ) : <p>Nenhum Snippet encontrado</p>
           }
          

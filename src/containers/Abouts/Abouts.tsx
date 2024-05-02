@@ -5,33 +5,33 @@ import Link from "next/link";
 import ReactPaginate from "react-paginate";
 import { AiFillCaretRight, AiFillCaretLeft } from "react-icons/ai";
 
-interface AboutProps {
+interface AboutsProps {
   isArchive: boolean;
-  about: any;
+  abouts: any;
   noOfAbout: number;
 }
 
-const About : React.FC<AboutProps> = ({
+const Abouts: React.FC<AboutsProps> = ({
   isArchive,
-  about,
+  abouts,
   noOfAbout,
 }) => {
   const articlesPerPage = noOfAbout || 9;
 
   // const [articles, setArticles] = useState([]);
 
-  const [currentItems, setCurrentItems] = useState(about || []);
+  const [currentItems, setCurrentItems] = useState(abouts || []);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
 
   useEffect(() => {
     const endOffset = itemOffset + articlesPerPage;
-    setCurrentItems(about?.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(about?.length / articlesPerPage));
-  }, [itemOffset, articlesPerPage, about]);
+    setCurrentItems(abouts?.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(abouts?.length / articlesPerPage));
+  }, [itemOffset, articlesPerPage, abouts]);
 
   const handlePageClick = (event: any) => {
-    const newOffset = (event.selected * articlesPerPage) % about?.length;
+    const newOffset = (event.selected * articlesPerPage) % abouts?.length;
     setItemOffset(newOffset);
   };
 
@@ -53,7 +53,7 @@ const About : React.FC<AboutProps> = ({
 
       <br />
 
-      {!isArchive && about?.length > articlesPerPage  && (
+      {!isArchive && abouts?.length > articlesPerPage  && (
         <div className="flex flex-col justify-center">
           <ReactPaginate
             breakLabel="..."
@@ -71,10 +71,10 @@ const About : React.FC<AboutProps> = ({
       {isArchive && (
         <div className="w-full flex items-center">
           <Link
-            href={"/about"}
-            className="w-auto h-auto text-sm py-3 px-10 text-center dark:bg-slate-800 bg-appBlue-100 dark:bg-appBlue-50 rounded-full mx-auto text-white font-bold hover:!text-white dark:hover:!text-slate-400 transition-all transform hover:scale-105"
+            href={"/abouts"}
+            className="w-auto h-auto text-sm py-3 px-10 text-center dark:bg-slate-800 bg-appBlue-100 rounded-full mx-auto text-white font-bold hover:!text-white dark:hover:!text-slate-400 transition-all transform hover:scale-105"
           >
-            Todas as páginas
+            Todos os Abouts
           </Link>
         </div>
       )}
@@ -82,4 +82,23 @@ const About : React.FC<AboutProps> = ({
   );
 };
 
-export default About;
+export default Abouts;
+
+
+  {/* {SORTED_SNIPPETS_BY_DATE.length
+        ? SORTED_SNIPPETS_BY_DATE.map((each, i) => (
+            <AboutCard key={i} about={each} />
+          ))
+        : null}
+
+      {isArchive &&
+      SORTED_SNIPPETS_BY_DATE.length > articlesPerPage  ? (
+        <div className="w-full flex items-center">
+          <Link
+            href="/pages/blog"
+            className="w-auto h-auto text-sm py-3 px-10 text-center dark:bg-slate-800 bg-appRed-100 rounded-full mx-auto text-white font-bold hover:!text-white dark:hover:!text-slate-400 transition-all transform hover:scale-105"
+          >
+            View All Abouts
+          </Link>
+        </div>
+      ) : null} */}

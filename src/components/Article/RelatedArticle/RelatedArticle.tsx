@@ -1,18 +1,15 @@
-import { ArticleCard, SnippetCard, AboutCard } from "@/components";
+import { ArticleCard, SnippetCard } from "@/components";
 import RelatedArticleCard from "../ArticleCards/RelatedArticleCard";
-
 interface RelatedArticleProps {
-    relatedPosts: any[];
+    relatedPosts: any;
     isSnippet: boolean;
     isSeries: boolean;
-    isAbout: boolean;
 }
 
 const RelatedArticles: React.FC<RelatedArticleProps> = ({
     relatedPosts,
     isSnippet,
     isSeries,
-    isAbout
 }) => {
     return (
         <>
@@ -32,7 +29,7 @@ const RelatedArticles: React.FC<RelatedArticleProps> = ({
                                       isExternal={false}
                                       previousPost={false}
                                       isSeries={false}
-                                      path={`/artigos/${each.slug?.current}`} // Verifica se slug está definido antes de acessar current
+                                      path={`/artigos/${each.slug.current}`}
                                   />
                               ))
                         : null}
@@ -43,17 +40,49 @@ const RelatedArticles: React.FC<RelatedArticleProps> = ({
                                   <SnippetCard
                                       snippet={each}
                                       key={i + each._id}
-                                      path={`/snippets/${each.slug?.current}`} // Verifica se slug está definido antes de acessar current
+                                      path={`/snippets/${each.slug.current}`}
                                   />
                               ))
                         : null}
+
+                    {/* {!isSnippet && relatedPosts?.length && isSeries
+                        ? relatedPosts
+                              .slice(0, 2)
+                              .map((each: any, i: number) => (
+                                  <RelatedArticleCard
+                                      article={each}
+                                      key={i + each._id}
+                                      isExternal={false}
+                                      previousPost={false}
+                                      isSeries={true}
+                                      path={`/artigos/${each.slug.current}`}
+                                  />
+                              ))
+                        : null} */}
+                    {/* {console.log(relatedPosts, "relatedPosts")} */}
+                    {/* @ts-ignore */}
+
+                    {/* {isSeries &&
+                        !isSnippet &&
+                        relatedPosts?.previousPost != null && (
+                            <RelatedArticleCard
+                                article={relatedPosts?.perviousPost}
+                                isExternal={false}
+                                previousPost={true}
+                                isSeries={true}
+                                path={`/artigos/${relatedPosts?.perviousPost?.slug.current}`}
+                            />
+                        )} */}
+
+                    {(isSeries &&
+                        !isSnippet &&
+                        relatedPosts.length === 0 && (
+                            <p className={"mb-0 px-3 md:mb-3"}>
+                                Atualmente, nÃ£o hÃ¡ artigos disponÃ­veis nesta sÃ©rie. Fique ligado para prÃ³ximas atualizaÃ§Ãµes!
+                            </p>
+                        ))}
+
                     
-                    {/* Verifica se relatedPosts é um array vazio antes de acessar suas propriedades */}
-                    {isSeries && !isSnippet && relatedPosts?.length === 0 && (
-                        <p className={"mb-0 px-3 md:mb-3"}>
-                            Atualmente, não há artigos disponíveis nesta série. Fique ligado para próximas atualizações!
-                        </p>
-                    )}
                 </div>
             </div>
         </>

@@ -35,45 +35,36 @@ const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet, isAbout }: any) => {
             <div className='flex flex-wrap items-center justify-center text-base font-medium mt-8'>
                 <div className='m-5 flex flex-wrap items-center justify-evenly'>
                     <div>
-                        {author?.image && (
-                            <Image
-                                src={`${urlFor(author.image.asset?._ref)}`}
-                                alt={author.image.alt}
-                                height={40}
-                                width={40}
-                                className='h-10 w-10 rounded-full'
-                            />
-                        )}
+                       
+                        <Image
+                            src={`${urlFor(author?.image?.asset?._ref)}`}
+                            alt={author?.image?.alt}
+                            height={40}
+                            width={40}
+                            className='h-10 w-10 rounded-full'
+                        />
                     </div>
                     <div className='m-3 font-semibold'>
                         <p>{author?.name}</p>
                     </div>{" "}
                 </div>
                 <div className='m-5 text-slate-400'>
-                    {publishedAt && (
-                        <p>{format(new Date(publishedAt), "dd / MM / yyyy")}</p>
-                    )}
+                    <p>{format(new Date(publishedAt), "dd / MM / yyyy")}</p>
                 </div>
                 <div className='ml-5 text-slate-400'>📖 {estimatedReadingTime ? estimatedReadingTime : '2'} minutos</div>
             </div>
-
             {!isSnippet && (
-                <>
-                    {mainImage && (
-                        <ArticleImage
-                            src={`${urlFor(mainImage?.asset?._ref)}`}
-                            alt={mainImage?.alt}
-                            imageWidth={mainImageWidth}
-                            imageHeight={mainImageHeight}
-                        />
-                    )}
-                </>
+                <ArticleImage
+                    src={`${urlFor(mainImage?.asset?._ref)}`}
+                    alt={mainImage?.alt}
+                    imageWidth={mainImageWidth}
+                    imageHeight={mainImageHeight}
+                />
             )}
-
             {!isSnippet && (
                 <ArticleTags tags={tags} center={true} isLight={true} />
             )}
-            
+
             <div
                 className={combineClasses(
                     "flex flex-col flex-wrap justify-center text-center"
@@ -95,11 +86,9 @@ const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet, isAbout }: any) => {
 
                 <div className='text-[14px] m-1 md:text-lg'>
                     <p>
-                        <span>Última atualização: </span>
+                        <span>Última Atualização: </span>
                         <span className='text-appBlue-100 dark:text-appBlue-50'>
-                        {_updatedAt && ( // Verifica se publishedAt está definido
-                            <p>{format(new Date(_updatedAt), "dd / MM / yyyy")}</p>
-                        )}
+                            {format(new Date(_updatedAt), "dd / MM / yyyy")}
                         </span>
                     </p>
                 </div>

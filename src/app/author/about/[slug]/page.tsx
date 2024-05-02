@@ -47,7 +47,7 @@ const AuthorAbout = async ({ params }: { params: { slug: string } }) => {
             title
             className="dark:text-appRed-100 text-appBlue-100"
           >
-            Sobre: {authorAbout?.name}
+            About: {authorAbout?.name}
             
           </Text>
 

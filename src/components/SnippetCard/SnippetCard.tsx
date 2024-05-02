@@ -4,8 +4,6 @@ import { combineClasses } from "@/utils/utils";
 import classes from "../Article/ArticleCards/ArticleCard.module.scss";
 import { format } from "date-fns";
 
-
-
 interface ISnippet {
   title: string;
   _createdAt: Date;

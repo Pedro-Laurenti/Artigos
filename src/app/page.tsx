@@ -7,7 +7,6 @@ import { SanityDocument } from "@sanity/client";
 import { postsQuery, snippetsQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 import { Suspense } from "react";
-import { Flow } from "@/components";
 
 import { Metadata } from 'next'
 import {WEBSITE_NAME,META_DESCRIPTION} from '@/constants/_APP_SETUP'
@@ -79,8 +78,6 @@ export default async function Home() {
                     </div>
                 
                 </Suspense>
-
-                <Flow />
 
                 <div className='container mx-auto mt-20 px-0 lg:px-[15px]'>
                     <div className={"flex flex-wrap"}>

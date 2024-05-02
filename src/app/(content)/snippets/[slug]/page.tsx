@@ -1,7 +1,7 @@
 import { ArticleDetails ,} from "@/containers";
 import { Metadata } from "next";
 import { SanityDocument } from "@sanity/client";
-import {  getRandomSnippetsQuery,snippetQuery } from "@/sanity/lib/queries";
+import { getRandomSnippetsQuery,snippetQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 
 

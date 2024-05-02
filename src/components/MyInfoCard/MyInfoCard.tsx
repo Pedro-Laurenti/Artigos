@@ -27,7 +27,7 @@ const MyInfoCard = () => {
                     <span
                         className={styleCss}
                     >
-                        Sobre
+                        About
                     </span>
                 </Link>
                 <Link href='/contact'>

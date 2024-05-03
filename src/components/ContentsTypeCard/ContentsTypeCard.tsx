@@ -1,4 +1,3 @@
-import { getRandomGradientColor } from "@/utils/utils";
 import Link from "next/link";
 import { allTypesContent } from "@/data";
 
@@ -17,7 +16,23 @@ const ContentsTypeCard = () => {
                         </span>
                     </Link>
                 );
+
             })}
+            <hr className='border-1 mx-auto mb-5 w-[98%]' />
+            <Link href='/sobre'>
+                <span
+                    className={styleCss}
+                >
+                    Sobre o projeto
+                </span>
+            </Link>
+            <Link href='/legal/termos-e-condicooes'>
+                <span
+                    className={styleCss}
+                >
+                    Institucional
+                </span>
+            </Link>
         </>
     );
 };

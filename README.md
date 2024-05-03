@@ -11,9 +11,10 @@ A revista científica **"Artigos TLK"** é uma plataforma desenvolvida pela Ther
 ## 3. Rentabilização:
 
 A rentabilização do sistema pode ocorrer por meio de:
-- **Assinaturas Premium:** Oferecemos assinaturas premium para acesso exclusivo a conteúdos especiais, como webinars, workshops e cursos.
-- **Publicidade:** Possibilitamos espaços publicitários para empresas e organizações relacionadas ao campo da saúde infantil.
+
+- **Campanhas de marketing:** O marketing das clínicas poderá usar essa plataforma para melhor embasar as campanhas feitas nas redes sociais
 - **ADS:** Anúncios do Google em determinados espaços da página são rentabilizáveis.
-- **Campanhas de mnarketing:** O marketing das clínicas poderá usar essa plataforma para melhor embasar as campanhas feitas nas redes sociais
 - **Movimentação do nome TLK:** A marca será conhecida como pioneira na pesquisa científica de soluções envolvendo terapia infantil
+- **Publicidade:** Possibilitamos espaços publicitários para empresas e organizações relacionadas ao campo da saúde infantil.
+- **Assinaturas Premium:** Podemos oferecer assinaturas premium para acesso exclusivo a conteúdos especiais, como webinars, workshops e cursos.
 - **Opção de "leia mais":** Com essa plataforma é possível fazer novas estratégias de conteúdo apresentando um "leia mais" em notícias (TLK News) e em conteúdos postados nas redes sociais

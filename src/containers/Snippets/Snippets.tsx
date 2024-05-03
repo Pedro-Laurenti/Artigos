@@ -45,7 +45,7 @@ const Snippets: React.FC<SnippetsProps> = ({
                 <SnippetCard
                   snippet={each}
                   key={i + each._id}
-                  path={`/snippets/${each.slug.current}`}
+                  path={`/posts/${each.slug.current}`}
                 />
               ))
           : null}
@@ -71,10 +71,10 @@ const Snippets: React.FC<SnippetsProps> = ({
       {isArchive && (
         <div className="w-full flex items-center">
           <Link
-            href={"/snippets"}
+            href={"/posts"}
             className="w-auto h-auto text-sm py-3 px-10 text-center dark:bg-slate-800 bg-appBlue-100 rounded-full mx-auto text-white font-bold hover:!text-white dark:hover:!text-slate-400 transition-all transform hover:scale-105"
           >
-            Todos os Snippets
+            Todos os Posts
           </Link>
         </div>
       )}

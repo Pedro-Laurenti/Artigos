@@ -29,8 +29,8 @@ const footerLinks = {
         url: "https://www.therapieslovekids.com/",
       },
       {
-        name: "About",
-        url: "/about",
+        name: "Sobre",
+        url: "/sobre",
       },
       {
         name: "Contato",

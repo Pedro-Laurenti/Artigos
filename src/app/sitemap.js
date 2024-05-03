@@ -38,7 +38,7 @@ export default async function sitemap() {
     const snippets = await createClient(clientConfig).fetch(snippetsQuery)
 
     const snippetsUrls = snippets.map((snippet) => ({
-        url: `${baseUrl}/snippets/${snippet?.slug?.current}`,
+        url: `${baseUrl}/posts/${snippet?.slug?.current}`,
         lastModified: snippet?.updatedAt,
     }));
 
@@ -64,7 +64,7 @@ export default async function sitemap() {
         { url: `${baseUrl}/open-source`, lastModified: new Date() },
         { url: `${baseUrl}/tags`, lastModified: new Date() },
         { url: `${baseUrl}/artigos`, lastModified: new Date() },
-        { url: `${baseUrl}/snippets`, lastModified: new Date() },
+        { url: `${baseUrl}/posts`, lastModified: new Date() },
         { url: `${baseUrl}/categorias`, lastModified: new Date() },
         { url: `${baseUrl}/series`, lastModified: new Date() },
         ...postUrls,

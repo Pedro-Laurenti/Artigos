@@ -40,7 +40,7 @@ const RelatedArticles: React.FC<RelatedArticleProps> = ({
                                   <SnippetCard
                                       snippet={each}
                                       key={i + each._id}
-                                      path={`/snippets/${each.slug.current}`}
+                                      path={`/posts/${each.slug.current}`}
                                   />
                               ))
                         : null}

@@ -82,7 +82,7 @@ export default async function Home() {
                 <div className='container mx-auto mt-20 px-0 lg:px-[15px]'>
                     <div className={"flex flex-wrap"}>
                         <h1 className='mb-5 w-full px-3 text-xl font-bold md:text-3xl'>
-                            Últimos Snippets
+                            Últimos Posts
                         </h1>
                         <hr className='border-1 mx-auto mb-5 w-[98%]' />
                         {allSnippets?.length > 0 ? (

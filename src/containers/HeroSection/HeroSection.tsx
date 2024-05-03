@@ -1,7 +1,6 @@
 import React from "react";
 import { ContentsTypeCard, MyInfoCard } from "@/components/index";
 import Image from "next/legacy/image";
-import PalestinFlag from '../../app/free-palestine/images/Palestine.jpg'
 import Link from "next/link";
 
 

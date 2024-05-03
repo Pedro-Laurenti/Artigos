@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/legacy/image";
-import ProfilePic from "./photo.jpg";
+import ProfilePic from "./photo.png";
 
 const MyInfoCard = () => {
     const styleCss =
@@ -23,18 +23,18 @@ const MyInfoCard = () => {
                 
             </div>
             <div className='mt-5 flex flex-col mb-5 md:mt-0 md:flex-row md:items-center'>
-                <Link href='/about'>
+                <Link href='https://www.therapieslovekids.com'>
                     <span
                         className={styleCss}
                     >
-                        About
+                        Site principal
                     </span>
                 </Link>
-                <Link href='/contact'>
+                <Link href='https://www.therapieslovekids.com/sobre'>
                     <span
                         className={styleCss}
                     >
-                        Contato
+                        Conheça a empresa
                     </span>
                 </Link>
                 {/* <Link href='/profiles'>

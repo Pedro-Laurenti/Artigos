@@ -71,10 +71,10 @@ const Abouts: React.FC<AboutsProps> = ({
       {isArchive && (
         <div className="w-full flex items-center">
           <Link
-            href={"/abouts"}
+            href={"/sobre"}
             className="w-auto h-auto text-sm py-3 px-10 text-center dark:bg-slate-800 bg-appBlue-100 rounded-full mx-auto text-white font-bold hover:!text-white dark:hover:!text-slate-400 transition-all transform hover:scale-105"
           >
-            Todos os Abouts
+            Leia mais
           </Link>
         </div>
       )}

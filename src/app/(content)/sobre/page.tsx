@@ -6,7 +6,7 @@ import { SanityDocument } from "@sanity/client";
 import { aboutsQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 export const metadata: Metadata = {
-  title:'About',
+  title:'Sobre',
   description: `Explore trechos de conteúdos já postados em ${WEBSITE_NAME}. Descubra dicas rápidas e insights para a sua jornada.`,
   keywords: 'trechos de tecnologia, dicas rápidas, exemplos de código, insights de codificação',
 };

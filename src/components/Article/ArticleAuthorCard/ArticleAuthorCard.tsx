@@ -51,7 +51,7 @@ const ArticleAuthorCard = ({ author}: { author: IAuthor}) => {
                   className="w-auto h-auto text-sm py-3 px-4 text-center dark:bg-white bg-slate-800 rounded-full mx-auto text-white dark:text-black font-bold hover:!text-white dark:hover:!text-slate-400 transition-all transform hover:scale-105 md:px-10"
                 >
                   
-                  Learn More About Me
+                 Leia mais
                 </Link>
               </div>
             </div>

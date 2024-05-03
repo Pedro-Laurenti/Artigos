@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             
-            {/* About Us */}
+            {/* Sobre nós */}
             <div className="flex flex-col text-appBlue-200 dark:text-appGray-100 md:col-span-2">
               <div className="text-lg font-semibold mb-2">
                 <Image

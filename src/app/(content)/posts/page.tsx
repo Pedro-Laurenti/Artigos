@@ -36,7 +36,7 @@ const Snippets = async () => {
                 snippets={allSnippets}
                 noOfSnippet={9}
               />
-            ) : <p>Nenhum Snippet encontrado</p>
+            ) : <p>Nenhum Post encontrado</p>
           }
          
         </div>

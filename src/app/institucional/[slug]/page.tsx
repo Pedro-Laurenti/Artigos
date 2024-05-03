@@ -41,7 +41,7 @@ const Legal = async ({ params }: { params: { slug: string } }) => {
                     !legal ? (
                       <p>Conteúdo não encontrado</p>
                     ) :(<>
-                    <Text p className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-appBlue-100 dark:text-appBlue-50'>
+                    <Text p className='text-base sm:text-lg md:text-xl lg:text-xl xl:text-xl text-appBlue-100 dark:text-appBlue-50'>
                         Criado à:{" "}
                         {format(new Date(legal?._createdAt), "dd / MM / yyyy")} |
                         Atualizado à:

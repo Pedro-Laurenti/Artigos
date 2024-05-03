@@ -15,9 +15,9 @@ const ArticelFooter = ({ isSeries,relatedPosts,authorInfo,isSnippet }: any) => {
      <div className="mx-auto lg:px-[15px] mt-20">
         <div className={"flex flex-wrap"}>
           <h1 className="px-3 w-full mb-5 text-xl md:text-3xl font-bold dark:text-appBlue-50 text-appBlue-100">
-            COMENTÃRIOS
+            COMENTÁRIOS
           </h1>
-          <p className="px-3 w-full mb-5">Sua contribuiÃ§Ã£o Ã© muito bem-vinda, deixe um comentÃ¡rio abaixo e participe da revisÃ£o dos artigos!</p>
+          <p className="px-3 w-full mb-5">Sua contribuição é muito bem-vinda, deixe um comentário abaixo e participe da revisão dos artigos e da nossa comunidade!</p>
           <hr className="border-1 mb-5 w-[98%] mx-auto" />
           <GitHubComment/>
         </div>

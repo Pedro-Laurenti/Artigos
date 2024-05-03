@@ -78,7 +78,7 @@ const RelatedArticles: React.FC<RelatedArticleProps> = ({
                         !isSnippet &&
                         relatedPosts.length === 0 && (
                             <p className={"mb-0 px-3 md:mb-3"}>
-                                Atualmente, nÃ£o hÃ¡ artigos disponÃ­veis nesta sÃ©rie. Fique ligado para prÃ³ximas atualizaÃ§Ãµes!
+                                Atualmente não há mais artigos para esta série, fique ligado nas próximas atualizações!
                             </p>
                         ))}
 

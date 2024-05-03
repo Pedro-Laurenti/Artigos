@@ -91,7 +91,7 @@ export default async function Home() {
                                 noOfSnippet={3}
                             />
                         ) : (
-                            <p>Ainda não temos nenhum snippet 😢</p>
+                            <p>Ainda não temos nenhum post 😢</p>
                         )}
                     </div>
                 </div>

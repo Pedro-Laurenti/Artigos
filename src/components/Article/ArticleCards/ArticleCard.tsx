@@ -60,7 +60,7 @@ const ArticleCard = ({ article, path, isExternal }: IProp) => {
               className={"font-bold text-xs pt-3 mb-0 md:mb-3 text-appBlue-100 dark:text-appBlue-50"}
             >
               <span className="pr-1">
-              {format(new Date(publishedAt), "d - MM - yyyy")}
+              {format(new Date(publishedAt), "dd / MM / yyyy")}
               </span>{" "}
               {readTime.text !== "0 min read" && (
                 <>

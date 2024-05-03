@@ -13,13 +13,13 @@ const ProfileLink = ({ name, index, url }: ProfileLinksType) => {
         <>
             {deviceSize === "desktop" ? (
                 <h3 className='my-4 text-2xl font-semibold leading-tight'>
-                    {index}. {name} ------{">"}{" "}
+                    {index}. {name} - {" "}
                     <a
                         href={url}
                         aria-label={`${url}`}
                         target='_blank'
                         rel='noopener noreferrer'
-                        className='text-appBlue-100 dark:text-appRed-100'
+                        className='text-appBlue-100 dark:text-appBlue-50'
                     >
                         {url}
                     </a>

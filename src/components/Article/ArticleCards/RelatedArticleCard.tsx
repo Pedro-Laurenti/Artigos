@@ -46,18 +46,18 @@ const RelatedArticleCard = ({ article, path,isExternal }: IProp) => {
             <div
                 className={combineClasses(
                     classes.article_card,
-                    "flex flex-col justify-between border-b-[5px] border-appRed-100 pb-5 dark:bg-slate-800 dark:text-white dark:drop-shadow-lg"
+                    "flex flex-col justify-between border-b-[5px] border-appBlue-100 pb-5 dark:bg-slate-800 dark:text-white dark:drop-shadow-lg"
                 )}
             >
                 <div>
                     <div className={"d-block px-[15px] py-0"}>
                         <p
                             className={
-                                "mb-0 pt-3 text-xs font-bold text-appRed-100 md:mb-3"
+                                "mb-0 pt-3 text-xs font-bold text-appBlue-100 md:mb-3"
                             }
                         >
                             <span className='pr-1'>
-                                {format(new Date(publishedAt), "MMMM d, yyyy")}
+                                {format(new Date(publishedAt), "dd / MM / yyyy")}
                             </span>{" "}
                             {readTime.text !== "0 min read" && (
                                 <>

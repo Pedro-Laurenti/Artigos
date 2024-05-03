@@ -42,9 +42,9 @@ const AuthorProfiles = async ({ params }: Props ) => {
         
           <Text
             title
-            className="mb-5 mt-10 dark:text-appRed-100 text-appBlue-100"
+            className="mb-5 mt-10 dark:text-appBlue-50 text-appBlue-100"
           >
-            {authorProfile?.name} Profiles
+            {authorProfile?.name} Perfis
           </Text>
 
           <div className="grid">

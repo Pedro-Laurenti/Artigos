@@ -45,7 +45,7 @@ const CategoryDetail = async ({ params }: { params: { slug: string } }) => {
                 />
                 <Text
                     title
-                    className='mb-8 mt-10 capitalize text-appPurple-100 
+                    className='mb-8 mt-10 capitalize text-appBlue-100 
           dark:text-appBlue-50'
                 >
                     {title}

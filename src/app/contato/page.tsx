@@ -27,7 +27,7 @@ const Contact = async () => {
                         <>
                             <Text
                                 title
-                                className='text-appBlue-100 dark:text-appRed-100'
+                                className='text-appBlue-100 dark:text-appBlue-50'
                             >
                                 {getFirstContact?.title}
                             </Text>

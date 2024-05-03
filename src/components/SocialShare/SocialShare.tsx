@@ -131,7 +131,7 @@ const SocialShare = () => {
       </div>
       <div
         className={combineClasses(
-          "bg-[#f5f7fa] border border-appRed-100 text-appRed-100 px-4 py-3 rounded z-[9999] fixed flex transition-all right-[10px]",
+          "bg-[#f5f7fa] border border-appBlue-100 text-appBlue-100 px-4 py-3 rounded z-[9999] fixed flex transition-all right-[10px]",
           showCopiedAlert
             ? "bottom-[10%] opacity-100"
             : "-bottom-20 opacity-0"

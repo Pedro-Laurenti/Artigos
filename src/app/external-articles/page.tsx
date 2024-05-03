@@ -22,7 +22,7 @@ const ExternalArticles = async () => {
             <div className='mt-19'>
                 <Text
                     title
-                    className='center mb-5 mt-10 text-appPurple-100 dark:text-appRed-100'
+                    className='center mb-5 mt-10 text-appBlue-100 dark:text-appBlue-50'
                 >
                     Artigos externos ✨
                 </Text>

@@ -24,7 +24,7 @@ const ArticelFooter = ({ isSeries,relatedPosts,authorInfo,isSnippet }: any) => {
     </div>
     {/* <div className="mx-auto lg:px-[15px] mt-20">
         <div className={"flex flex-wrap"}>
-          <h1 className="px-3 w-full mb-5 text-xl md:text-3xl font-bold dark:text-appRed-100 text-appBlue-100">
+          <h1 className="px-3 w-full mb-5 text-xl md:text-3xl font-bold dark:text-appBlue-50 text-appBlue-100">
             WRITTEN BY
           </h1>
           <hr className="border-1 mb-5 w-[98%] mx-auto" />

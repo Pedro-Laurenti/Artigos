@@ -37,12 +37,12 @@ const MyInfoCard = () => {
                         Conheça a empresa
                     </span>
                 </Link>
-                {/* <Link href='/profiles'>
+                {/* <Link href='/perfis'>
                     <span
                         className={styleCss}
                         style={{ background: `${getRandomGradientColor()}` }}
                     >
-                        Profiles
+                        perfis
                     </span>
                 </Link> */}
             </div>

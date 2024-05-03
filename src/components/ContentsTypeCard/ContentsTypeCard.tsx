@@ -26,7 +26,7 @@ const ContentsTypeCard = () => {
                     Sobre o projeto
                 </span>
             </Link>
-            <Link href='/legal/termos-e-condicooes'>
+            <Link href='/institucional/termos-e-condicooes'>
                 <span
                     className={styleCss}
                 >

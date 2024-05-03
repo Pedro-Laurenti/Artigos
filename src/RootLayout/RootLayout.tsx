@@ -8,17 +8,14 @@ export default function RootLayout({
   children: any;
 }) {
 
-
   return (
    
     <ThemeProvider enableSystem={true} attribute="class">
-            
-      <div className="flex-grow">
-        <Navbar />
-        {children}
-        <Footer />
-      </div>
-      
+      <Navbar />    
+        <div className="flex-grow min-h-screen">
+          {children}
+        </div>
+      <Footer />
     </ThemeProvider>
       
   );

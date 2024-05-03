@@ -51,7 +51,7 @@ export default async function sitemap() {
 
     const legals = await createClient(clientConfig).fetch(getLegalsQuery)
     const legalsUrls = legals.map((legal) => ({
-        url: `${baseUrl}/legal/${legal?.slug?.current}`,
+        url: `${baseUrl}/institucional/${legal?.slug?.current}`,
         lastModified: legal?.updatedAt,
     }));
 
@@ -59,9 +59,9 @@ export default async function sitemap() {
         { url: baseUrl, lastModified: new Date() },
         { url: `${baseUrl}/sobre`, lastModified: new Date() },
         { url: `${baseUrl}/contato`, lastModified: new Date() },
-        { url: `${baseUrl}/profiles`, lastModified: new Date() },
-        { url: `${baseUrl}/external-articles`, lastModified: new Date() },
-        { url: `${baseUrl}/open-source`, lastModified: new Date() },
+        { url: `${baseUrl}/perfis`, lastModified: new Date() },
+        // { url: `${baseUrl}/external-articles`, lastModified: new Date() },
+        // { url: `${baseUrl}/open-source`, lastModified: new Date() },
         { url: `${baseUrl}/tags`, lastModified: new Date() },
         { url: `${baseUrl}/artigos`, lastModified: new Date() },
         { url: `${baseUrl}/posts`, lastModified: new Date() },

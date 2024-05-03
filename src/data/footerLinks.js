@@ -14,11 +14,11 @@ const footerLinks = {
     legal: [
       {
         name: "Política de privacidade",
-        url: "/legal/politica-de-privacidade",
+        url: "/institucional/politica-de-privacidade",
       },
       {
         name: "Termos e condições",
-        url: "/legal/termos-e-condicoes",
+        url: "/institucional/termos-e-condicoes",
       },
     ],
   

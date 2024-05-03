@@ -15,26 +15,25 @@ export const metadata: Metadata = {
     openGraph: {
         title: WEBSITE_NAME,
         description: META_DESCRIPTION,
-        url: 'https://www.artigos.therapieslovekids.com',
+        url: 'https://www.syedamaham.dev',
         siteName: WEBSITE_NAME,
         images: [
           {
-            url: './opengraph-image.png',
+            url: '',
             width: 1400,
             height: 700,
           },
           {
-            url: './opengraph-image.png',
+            url: './blog-banner.png',
             width: 1800,
             height: 1600,
-            alt: 'Artigos Therapies Love Kids',
+            alt: 'Syeda Maham Fahim',
           },
         ],
-        locale: 'pt_BR',
+        locale: 'en_US',
         type: 'website',
       },
-  };
-
+};
 
 export default async function Home() {
     const articles = await sanityFetch<SanityDocument>({

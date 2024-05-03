@@ -14,14 +14,10 @@ import Studio from '../index'
 import { NextStudio } from 'next-sanity/studio'
 import config from '../../../../sanity.config'
 
-import styles from "./page.module.scss";
-
 export default function StudioPage() {
   return (
     <Studio>
-      <div className={styles.pageStyle}>
         <NextStudio config={config} />
-      </div>
     </Studio>
   )
 }

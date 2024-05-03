@@ -5,17 +5,17 @@ export default function GitHubComment() {
     return (
       <Giscus
         id="comments"
-        repo="SyedaMahamFahim/syedamaham.dev"
+        repo="Pedro-Laurenti/Artigos"
         repoId={`${process.env.NEXT_PUBLIC_GITHUB_COMMENT_REPO_ID}`}
-        category="Comments"
+        category="Comentários "
         categoryId={process.env.NEXT_PUBLIC_GITHUB_COMMENT_CATEGORY_ID}
         mapping="url"
-        term="Welcome to Maham's blog"
+        term="Bem vindo(a) à Artigos TLK"
         reactionsEnabled="1"
         emitMetadata="0"
         inputPosition="top"
         theme="light"
-        lang="en"
+        lang="pt-BR"
         loading="lazy"
       />
      

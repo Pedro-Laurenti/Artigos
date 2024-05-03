@@ -50,28 +50,27 @@ export const metadata: Metadata = {
   ],
 }
 
-export default function Layout({ children }: { children: any;}) {
 
+export default function Layout({ children }:  {children: any}) {
   return (
-        <html lang="en">
-             <body className="bg-slate-100 dark:bg-slate-900 transition-all flex flex-col min-h-screen h-auto">
-                
-                <RootLayout>{children}</RootLayout>
-                
-                <Analytics />
-                {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
-            <GoogleAnalytics ga_id= 
-            {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
-          ) : null}
+      <html lang="pt-BR">
+           <body className="bg-slate-100 dark:bg-slate-900 transition-all flex flex-col h-auto">
+         
+              <RootLayout>{children}</RootLayout>
+              <Analytics />
+              {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+          <GoogleAnalytics ga_id= 
+          {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        ) : null}
 
-          {
-            process.env.NEXT_PUBLIC_Metricool_Analytics_TOKEN ? (
-              <MetricoolAnalytics ga_id={process.env.NEXT_PUBLIC_Metricool_Analytics_TOKEN} />
-            ) : null
-          }
-          <GoogleAdsAnalytics/>
-            </body>
-            
-        </html>
-    )
+        {
+          process.env.NEXT_PUBLIC_Metricool_Analytics_TOKEN ? (
+            <MetricoolAnalytics ga_id={process.env.NEXT_PUBLIC_Metricool_Analytics_TOKEN} />
+          ) : null
+        }
+        <GoogleAdsAnalytics/>
+          </body>
+          
+      </html>
+  )
 }

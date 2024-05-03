@@ -24,7 +24,7 @@ const InMemo = async () => {
                 <div className='text-white text-xl'>
                     A good fella
                 </div>
-                <div className='text-black text-xs absolute z-50 bottom-0 right-0'>
+                <div className='text-black text-xs absolute z-50 bottom-0 left-0'>
                     ファックグラウコ
                 </div>
 

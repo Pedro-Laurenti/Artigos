@@ -57,18 +57,18 @@ export interface IAbout {
   seo?: iSEO;
 }
 
-export interface IOpenSourceData {
-  date: string;
-  title: string;
-}
+// export interface IOpenSourceData {
+//   date: string;
+//   title: string;
+// }
 
-export interface IOpenSource {
-  path?: string;
-  preview?: IOpenSourceData;
-  seo?: iSEO;
-  title: string;
-  url: string;
-}
+// export interface IOpenSource {
+//   path?: string;
+//   preview?: IOpenSourceData;
+//   seo?: iSEO;
+//   title: string;
+//   url: string;
+// }
 
 export interface iArticle {
   path: string;

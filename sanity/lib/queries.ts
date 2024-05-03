@@ -183,7 +183,7 @@ export const getRandomPostsQuery = groq`*[_type == "post" && slug.current != $cu
   publishedAt,
 }[0..2]`;
 // ======================== Open Source ================================
-export const getOpenSourceQuery = groq`*[_type == "openSource"]`;
+// export const getOpenSourceQuery = groq`*[_type == "openSource"]`;
 
 // ======================== Tags ================================
 
@@ -278,16 +278,16 @@ export const getAuthorAboutQuery = groq`*[_type == "author" && slug.current == $
 
 // ======================== ExternalArticels ================================
 
-export const getExternalArticelsQuery = groq`*[_type == "externalArticles"]{
-      _createdAt,
-    title,
-    body,
-    meta_description,
-    mainImage,
-    slug,
-    publishedAt,
-    "tags": tags[]-> {title,slug},
-    }`;
+// export const getExternalArticelsQuery = groq`*[_type == "externalArticles"]{
+//       _createdAt,
+//     title,
+//     body,
+//     meta_description,
+//     mainImage,
+//     slug,
+//     publishedAt,
+//     "tags": tags[]-> {title,slug},
+//     }`;
 // ======================== Series ================================
 
 export const getSeriesQuery = groq`*[_type == "series"]{

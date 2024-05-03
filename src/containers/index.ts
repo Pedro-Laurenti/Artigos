@@ -5,4 +5,4 @@ export const HomeArticles = dynamic(() => import('./HomeArticles/HomeArticles'))
 export const Snippets = dynamic(() => import('./Snippets/Snippets'));
 export const Abouts = dynamic(() => import('./Abouts/Abouts'));
 export const ArticleDetails = dynamic(() => import('./ArticleDetails/ArticleDetails'), { ssr: false });
-export const OpenSourceSection = dynamic(() => import('./OpenSourceSection/OpenSourceSection'));
+// export const OpenSourceSection = dynamic(() => import('./OpenSourceSection/OpenSourceSection'));

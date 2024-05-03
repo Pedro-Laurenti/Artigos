@@ -102,7 +102,7 @@ export default defineType({
                 to: [
                   { type: 'post' },
                   {type: 'category'},
-                  { type: 'openSource' },
+                  // { type: 'openSource' },
                   { type: 'series' },
                   { type: 'tags' },
                   { type: 'author' },

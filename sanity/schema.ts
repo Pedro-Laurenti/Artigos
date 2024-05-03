@@ -9,10 +9,10 @@ import author from './schemas/author'
 import tags from './schemas/tags'
 import series from './schemas/series'
 import profiles from './schemas/profiles'
-import openSource from './schemas/openSource'
+// import openSource from './schemas/openSource'
 import about from './schemas/about'
-import externalArticles from './schemas/externalArticles'
+// import externalArticles from './schemas/externalArticles'
 import contact from './schemas/contact'
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [post,author,legal,category,contact,profiles,blockContent,tags,series,openSource,snippet,about,externalArticles],
+  types: [post,author,legal,category,contact,profiles,blockContent,tags,series,/* openSource,*/snippet,about/*,externalArticles*/],
 }

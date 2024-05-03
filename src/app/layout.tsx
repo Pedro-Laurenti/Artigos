@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     {
       rel: 'android-chrome',
       sizes: '192x192',
-      url: '/android-chrome.pngg',
+      url: '/android-chrome-192x192.png',
     },
     {
       rel: 'android-chrome',

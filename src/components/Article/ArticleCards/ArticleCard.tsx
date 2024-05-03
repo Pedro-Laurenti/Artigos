@@ -43,7 +43,7 @@ const ArticleCard = ({ article, path, isExternal }: IProp) => {
         )}
       >
         <div>
-          <div className={"rounded-t-[4px] overflow-hidden h-[200px] relative"}>
+          <div className={"rounded-t-[4px] overflow-hidden relative"} style={{ width: '100%', paddingBottom: '75%' }}>
             <Image
               src={`${urlFor(_ref)}`}
               alt={alt}
@@ -52,6 +52,7 @@ const ArticleCard = ({ article, path, isExternal }: IProp) => {
               priority={true}
               blurDataURL={`${urlFor(_ref)}`}
               placeholder="blur"
+              objectFit="cover"
             />
           </div>
 

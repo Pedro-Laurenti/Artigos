@@ -31,12 +31,12 @@ const Series = async () => {
                 {
             articles?.length > 0 ? (
                 <HomeArticles
-                isArchive={false}
-                noOfArticle={6}
-                articles={articles}
-                isSeries={true}
-                isExternal={false}
-            />
+                    isArchive={false}
+                    noOfArticle={6}
+                    articles={articles}
+                    isSeries={true}
+                    isExternal={false}
+                />
             ) : <p>Nenhuma série encontrada</p>
           }
                     

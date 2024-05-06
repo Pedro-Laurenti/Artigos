@@ -8,11 +8,12 @@ import GoogleAnalytics from "../google/GoogleAnalytics";
 import MetricoolAnalytics from "../google/MetricoolAnalytics";
 // export const revalidate = 60 
 export const metadata: Metadata = {
+  metadataBase: new URL('http://localhost:3000'),
   title: {
     default: WEBSITE_NAME,
     template: `%s`
   },
-  description:META_DESCRIPTION,
+  description: META_DESCRIPTION,
   keywords: META_SEO_KEYWORDS,
   
   icons: [

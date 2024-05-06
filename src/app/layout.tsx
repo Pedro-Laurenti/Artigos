@@ -65,9 +65,9 @@ export default function Layout({ children }:  {children: any}) {
         ) : null}
 
         {
-          process.env.NEXT_PUBLIC_Metricool_Analytics_TOKEN ? (
-            // <MetricoolAnalytics ga_id={process.env.NEXT_PUBLIC_Metricool_Analytics_TOKEN} />
-          ) : null
+          // process.env.NEXT_PUBLIC_Metricool_Analytics_TOKEN ? (
+          //   <MetricoolAnalytics ga_id={process.env.NEXT_PUBLIC_Metricool_Analytics_TOKEN} />
+          // ) : null
         }
         <GoogleAdsAnalytics/>
           </body>

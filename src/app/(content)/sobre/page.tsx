@@ -1,10 +1,11 @@
-import { Text } from "@/components";
+import { Flow, Text } from "@/components";
 import { Abouts as AboutsContainer } from "@/containers";
 import {WEBSITE_NAME} from '@/constants/_APP_SETUP'
 import { Metadata } from "next";
 import { SanityDocument } from "@sanity/client";
 import { aboutsQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
+import { ListLiNumber } from "@/components/Article/ArticleContent/TextEditorComponents";
 export const metadata: Metadata = {
   title:'Sobre',
   description: `Explore trechos de conteúdos já postados em ${WEBSITE_NAME}. Descubra dicas rápidas e insights para a sua jornada.`,
@@ -25,7 +26,18 @@ const Abouts = async () => {
           title
           className="mb-8 mt-10 dark:text-appBlue-50 text-appBlue-100"
         >
-          Sobre
+          Saiba como participar
+        </Text>
+        <p>Ficou interessado em ter o seu artigo científico publicado na nossa plataforma?</p>
+        <li>Cumpra os passos abaixo</li>
+        <li>Participe gratuitamente</li>
+        <li>Colabore para o desenvolvimento científico na área de terapia infantil.</li>
+        <Flow />
+        <Text
+        title
+          className="mb-8 mt-10 dark:text-appBlue-50 text-appBlue-100"
+        >
+          Leia mais
         </Text>
         <div className="flex flex-wrap">
           {

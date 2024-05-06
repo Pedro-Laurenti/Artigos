@@ -76,9 +76,11 @@ const Blog = ({ post, relatedPosts, isSnippet, isSeries, isAbout }: any) => {
             </div>
           </div>
 
-          <button className="fixed right-2 bottom-0 m-2 p-3 rounded-full border-2 bg-appGray-100 opacity-75 hover:opacity-100" onClick={scrollToTop}>
-            <AiOutlineArrowUp className="text-[26px]" />
-          </button>
+          <div className="fixed right-6 bottom-1 p-2">
+            <button className="m-2 p-2 rounded-full border-2 opacity-75 hover:opacity-100 dark:bg-transparent " onClick={scrollToTop}>
+              <AiOutlineArrowUp className="text-[25px] dark:text-white" />
+            </button>
+          </div>
         </div>
       </section>
     </>

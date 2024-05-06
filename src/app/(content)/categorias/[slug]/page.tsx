@@ -39,9 +39,9 @@ const CategoryDetail = async ({ params }: { params: { slug: string } }) => {
         <section className='container px-3 pt-20 md:pb-20 md:pt-10'>
             <div className='mt-19'>
                 <Breadcrumbs
-                    pageName='Categories'
+                    pageName='Categorias'
                     pageSlug={title}
-                    pageLink='/categories'
+                    pageLink='/categorias'
                 />
                 <Text
                     title

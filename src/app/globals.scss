@@ -146,8 +146,7 @@ hr {
 .reading-progress-bar {
   position: fixed;
   height: 6px;
-  top: 0;
-  z-index: 900;
+  bottom: 0;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');

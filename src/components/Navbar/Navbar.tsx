@@ -17,10 +17,6 @@ import favIcon from "@publ/images/1-1-favicon.svg"
 
 const Navbar = () => {
 
-  // Togle menu
-  
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   // header animation scroll
 
   const [isTransparent, setIsTransparent] = useState(true);

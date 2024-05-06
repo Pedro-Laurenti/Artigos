@@ -5,7 +5,7 @@ import RootLayout from '../RootLayout/RootLayout'
 import "./globals.scss";
 import {WEBSITE_NAME,META_SEO_KEYWORDS,META_DESCRIPTION} from '@/constants/_APP_SETUP'
 import GoogleAnalytics from "../google/GoogleAnalytics";
-import MetricoolAnalytics from "../google/MetricoolAnalytics";
+// import MetricoolAnalytics from "../google/MetricoolAnalytics";
 // export const revalidate = 60 
 export const metadata: Metadata = {
   metadataBase: new URL('https://artigos.therapieslovekids.com'),
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }:  {children: any}) {
   return (
-      <html lang="pt-BR">asdsdasdsadsad
+      <html lang="pt-BR">
            <body className="bg-slate-100 dark:bg-slate-900 transition-all flex flex-col h-auto">
          
               <RootLayout>{children}</RootLayout>
@@ -66,7 +66,7 @@ export default function Layout({ children }:  {children: any}) {
 
         {
           process.env.NEXT_PUBLIC_Metricool_Analytics_TOKEN ? (
-            <MetricoolAnalytics ga_id={process.env.NEXT_PUBLIC_Metricool_Analytics_TOKEN} />
+            // <MetricoolAnalytics ga_id={process.env.NEXT_PUBLIC_Metricool_Analytics_TOKEN} />
           ) : null
         }
         <GoogleAdsAnalytics/>

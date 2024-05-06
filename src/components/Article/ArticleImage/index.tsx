@@ -34,11 +34,11 @@ const ImageArticle = ({
         >
             <Image
                 alt={alt}
-                loading='lazy'
                 src={`${urlFor(src)}`}
                 objectFit='contain'
                 height={imageHeight}
                 width={imageWidth}
+                priority={true}
             />
             {caption && (
                 <p

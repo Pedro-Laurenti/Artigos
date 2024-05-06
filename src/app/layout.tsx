@@ -8,7 +8,7 @@ import GoogleAnalytics from "../google/GoogleAnalytics";
 import MetricoolAnalytics from "../google/MetricoolAnalytics";
 // export const revalidate = 60 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL('https://artigos.therapieslovekids.com'),
   title: {
     default: WEBSITE_NAME,
     template: `%s`
@@ -54,7 +54,11 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }:  {children: any}) {
   return (
-      <html lang="pt-BR">
+      <html lang="pt-BR" suppressHydrationWarning>
+        <head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        </head>
            <body className="bg-slate-100 dark:bg-slate-900 transition-all flex flex-col h-auto">
          
               <RootLayout>{children}</RootLayout>

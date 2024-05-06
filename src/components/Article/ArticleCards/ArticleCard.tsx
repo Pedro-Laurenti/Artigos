@@ -43,7 +43,7 @@ const ArticleCard = ({ article, path, isExternal }: IProp) => {
         )}
       >
         <div>
-          <div className={"rounded-t-[4px] overflow-hidden relative"} style={{ width: '100%', paddingBottom: '75%' }}>
+          <div className={"rounded-t-[4px] overflow-hidden relative w-full pb-[75%]"}>
             <Image
               src={`${urlFor(_ref)}`}
               alt={alt}

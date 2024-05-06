@@ -60,7 +60,7 @@ return (
           </div>
         </div>
       </div>
-      <div className="absolute z-5 border-r-appBlue-50 rounded-md border-r-2 border-dashed w-1 h-full"></div>
+      <div className="absolute z-5 border-r-appBlue-100 rounded-md border-r-2 border-dashed w-1 h-full"></div>
     </div>
   </div>
 );

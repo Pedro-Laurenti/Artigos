@@ -1,12 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ["cdn.sanity.io"],
-    },
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'cdn.sanity.io',
+            pathname: '**',
+          },
+        ],
+      },
     reactStrictMode: true,
     swcMinify: true,
     productionBrowserSourceMaps: false, // Disable source maps in development
-    optimizeFonts: false, // Disable font optimization
+    optimizeFonts: true, // Disable font optimization
     webpack: (config, { isServer }) => {
         if (!isServer) {
             config.resolve.fallback.fs = false;

@@ -16,15 +16,14 @@ export const metadata: Metadata = {
         title: WEBSITE_NAME,
         description: META_DESCRIPTION,
         url: 'https://artigos.therapieslovekids.com',
-        siteName: WEBSITE_NAME,
         images: [
           {
-            url: './opengraph-image.png',
+            url: '/src/app/opengraph-image.png',
             width: 1400,
             height: 700,
           },
           {
-            url: './opengraph-image.png',
+            url: '/src/app/opengraph-image.png',
             width: 1800,
             height: 1600,
             alt: 'Therapies Love Kids',

@@ -428,12 +428,12 @@ export const getProfilesQuery = groq`*[_type == "profiles"]{
     }`;
 
 // ======================== Contact ================================
-export const getContactQuery = groq`*[_type == "contact"]{
-    title,
-    body,
-    meta_description,
-
-    }`;
+// export const getContactQuery = groq`*[_type == "contact"]{
+//     title,
+//     body,
+//     meta_description,
+// 
+//     }`;
 
 // getFull details
 export const getFullDetailsQuery = groq`*[_type == "post"]`;

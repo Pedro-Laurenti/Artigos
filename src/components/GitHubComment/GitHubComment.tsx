@@ -11,15 +11,15 @@ export default function GitHubComment() {
     <Giscus
       id="comments"
       repo="pedro-laurenti/comments-tlk"
-      repoId="R_kgDOL3wXSA"
+      repoId={`${process.env.NEXT_PUBLIC_GITHUB_COMMENT_REPO_ID}`}
       category="Comments"
-      categoryId="DIC_kwDOL3wXSM4CfK8n"
+      categoryId={process.env.GITHUB_COMMENT_CATEGORY_ID}
       mapping="pathname"
       strict='0'
       reactionsEnabled="1"
       emitMetadata="0"
       inputPosition="top"
-      theme={adjustedTheme} // Usar o tema ajustado
+      theme={adjustedTheme}
       lang="pt"
       loading="lazy"
       term="Bem vindo(a) à Artigos TLK"

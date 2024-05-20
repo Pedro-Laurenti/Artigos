@@ -16,7 +16,7 @@ const RelatedArticles: React.FC<RelatedArticleProps> = ({
             <div className='container mx-auto mt-20 px-0 lg:px-[15px]'>
                 <div className={"flex flex-wrap"}>
                     <h1 className='mb-5 w-full px-3 text-xl font-bold text-appBlue-100 dark:text-appBlue-50 md:text-3xl'>
-                        Leia mais {isSnippet ? "SNIPPETS" : "ARTIGOS"}
+                        Leia mais {isSnippet ? "Posts" : "Artigos"}
                     </h1>
                     <hr className='border-1 mx-auto mb-5 w-[98%]' />
                     {!isSnippet && relatedPosts?.length

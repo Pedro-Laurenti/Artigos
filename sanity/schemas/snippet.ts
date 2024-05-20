@@ -33,6 +33,34 @@ export default defineType({
       type: "string",
     }),
     defineField({
+      name: "categories",
+      title: "Categorias",
+      type: "array",
+      of: [{ type: "reference", to: { type: "category" } }],
+    }),
+    defineField({
+      name: "tags",
+      title: "Tags",
+      type: "array",
+      of: [{ type: "reference", to: { type: "tags" } }],
+    }),
+
+    defineField({
+      name: "isSeries",
+      title: "É uma série",
+      type: "boolean",
+      options: {
+        layout: "checkbox",
+      },
+    }),
+    defineField({
+      name: "series",
+      title: "Séries",
+      type: "reference",
+      to: { type: "series" },
+    }),
+
+    defineField({
       name: "author",
       title: "Autor",
       type: "reference",

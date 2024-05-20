@@ -13,14 +13,6 @@ const allTypesContent: ContentType[] = [
     url: "/posts",
   },
   {
-    name: "Tags",
-    url: "/tags",
-  },
-  {
-    name: "Categorias",
-    url: "/categorias",
-  },
-  {
     name: "Séries",
     url: "/series",
   },

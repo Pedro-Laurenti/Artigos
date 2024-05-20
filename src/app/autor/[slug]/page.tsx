@@ -44,7 +44,7 @@ const AuthorDetails = async ({ params }: { params: { slug: string } }) => {
           title
           className="mb-5 mt-10 dark:text-appBlue-50 text-appBlue-100 center"
         >
-          Artigos ✨
+          Artigos
         </Text>
         <div className={"flex flex-wrap flex-col"}>
         {author?.posts?.length > 0 ? (

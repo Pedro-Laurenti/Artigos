@@ -1,7 +1,8 @@
 import { ArticleDetails ,} from "@/containers";
 import { Metadata } from "next";
 import { SanityDocument } from "@sanity/client";
-import { getRandomSnippetsQuery,snippetQuery } from "@/sanity/lib/queries";
+import { postQuery,getRandomPostsQuery ,
+  seriesRelatedPosts,snippetQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 
 
@@ -36,14 +37,38 @@ const SnippetsDetail = async ({ params }: { params: { slug: string } }) => {
     query: snippetQuery,
     params,
 });
-  const relatedPosts = await sanityFetch<SanityDocument>({
-    query: getRandomSnippetsQuery,
-    params,
-});
+const isSeries = post?.isSeries;
+let relatedPosts;
+if (isSeries) {
+    // relatedPosts = await sanityFetch<SanityDocument>({
+    //     query: seriesNextAndPerviousPostOfRelatedPost,
+    //     params:{
+    //         currentPostSlug:params?.slug,
+    //         seriesSlug:post?.series?.slug?.current
+    //     },
+        
+    // });
+    relatedPosts = await sanityFetch<SanityDocument>({
+        query: seriesRelatedPosts,
+        params:{
+            currentPostSlug:params?.slug,
+            seriesSlug:post?.series?.slug?.current
+        },
+        
+    });
+} else {
+    relatedPosts = await sanityFetch<SanityDocument>({
+        query: getRandomPostsQuery,
+        params:{
+            currentPostSlug:params?.slug,
+        },
+    });
+    
+}
   return (
     <ArticleDetails
       post={post} 
-      isSeries={false}
+      isSeries={isSeries}
       isSnippet={true}
       relatedPosts={relatedPosts}
     />

@@ -10,6 +10,7 @@ import { Suspense } from "react";
 
 import { Metadata } from 'next'
 import {WEBSITE_NAME,META_DESCRIPTION} from '@/constants/_APP_SETUP'
+import Flow from "@/components/Flow/Flow";
 
 export const metadata: Metadata = {
     openGraph: {
@@ -51,6 +52,8 @@ export default async function Home() {
                 key={Math.random()}
             >
                 <HeroSection />
+
+                <Flow />
                 
                 <Suspense fallback={"Carregando"}>
                     <div className='container mx-auto mb-20 px-0 lg:px-[15px]'>

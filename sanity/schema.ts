@@ -8,11 +8,11 @@ import legal from './schemas/legal'
 import author from './schemas/author'
 import tags from './schemas/tags'
 import series from './schemas/series'
-import profiles from './schemas/profiles'
+// import profiles from './schemas/profiles'
 // import openSource from './schemas/openSource'
 import about from './schemas/about'
 // import externalArticles from './schemas/externalArticles'
 import contact from './schemas/contact'
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [post,author,legal,category,contact,profiles,blockContent,tags,series,/* openSource,*/snippet,about/*,externalArticles*/],
+  types: [snippet,post,author,category,tags,series,contact,legal,blockContent,about/* profiles,openSource,externalArticles */],
 }

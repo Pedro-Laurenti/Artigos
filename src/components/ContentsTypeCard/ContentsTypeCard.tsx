@@ -18,7 +18,10 @@ const ContentsTypeCard = () => {
                 );
 
             })}
-            <hr className='border-1 mx-auto mb-5 w-[98%]' />
+            <div className="w-[100%] flex justify-center my-5 ">
+                <hr className='border-1 mx-auto mb-5 w-[50%]' />
+            </div>
+            
             <Link href='/sobre'>
                 <span
                     className={styleCss}

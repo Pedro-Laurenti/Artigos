@@ -70,7 +70,7 @@ const SingleArticle = async ({ params }: Props) => {
 
     return (
         <ArticleDetails
-        isSeries={isSeries}
+            isSeries={isSeries}
             isSnippet={false}
             post={post}
             relatedPosts={relatedPosts}

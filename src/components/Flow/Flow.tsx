@@ -38,7 +38,7 @@ return (
           <Text subtitle className="mb-4 mt-2 dark:text-appBlue-50 text-appBlue-100">2.</Text>
           <div>
             Faça a <b>Submissão do artigo</b> entrando em contato diretamente pelo nosso e-mail ou por WhatsApp, pedimos que a mensagem siga com a seguinte estrutura:
-            <div className="bg-slate-200 rounded-lg my-4 p-2 leading-relaxed">
+            <div className="bg-slate-200 dark:bg-slate-700 rounded-lg my-4 p-2 leading-relaxed">
               <code>
                 Seu nome: (...)<br />
                 <br />
@@ -51,6 +51,9 @@ return (
                 Artigo em anexo: (Em formato PDF)
               </code>
             </div>
+            <a className="py-2 px-5 rounded-md text-white hover:text-white bg-appBlue-100 dark:bg-appBlue-50 hover:bg-appBlue-200 dark:hover:bg-appBlue-100" href="https://wa.me/556298711540">
+                Entrar em contato
+            </a>
           </div>
         </div>
         <div className="p-2 bg-appGray-100 dark:bg-slate-800 rounded-md border-2 border-solid flex gap-10 items-center">

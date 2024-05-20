@@ -39,7 +39,7 @@ const SeriesDetail = async ({ params }: { params: { slug: string } }) => {
   return (
     <section className="container px-3 md:pb-20 md:pt-10 pt-20">
       <div className="mt-19">
-        <Breadcrumbs pageName="Series" pageSlug={title} pageLink="/series" />
+        <Breadcrumbs pageName="Séries" pageSlug={title} pageLink="/series" />
         
         {
           !articles ? (

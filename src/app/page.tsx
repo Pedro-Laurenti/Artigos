@@ -53,7 +53,11 @@ export default async function Home() {
             >
                 <HeroSection />
 
-                <Flow />
+                <div className="flex flex-col items-center w-full my-40">
+                    <div className="w-1/2">
+                        <Flow />
+                    </div>
+                </div>
                 
                 <Suspense fallback={"Carregando"}>
                     <div className='container mx-auto mb-20 px-0 lg:px-[15px]'>

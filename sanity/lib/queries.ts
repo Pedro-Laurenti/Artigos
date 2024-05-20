@@ -203,6 +203,20 @@ export const getTagRelatedPostQuery = groq`*[_type == "post" && $slug in tags[]-
     "series":series-> {title,slug},
 }`;
 
+export const getTagRelatedSnippetQuery = groq`*[_type == "snippet" && $slug in tags[]->slug.current]{
+    _createdAt,
+    publishedAt,
+  title,
+  body,
+  "author": author -> {name,slug,image,designation,profiles,bio,about},
+  meta_description,
+  mainImage,
+  slug,
+  "tags": tags[]-> {title,slug},
+  "category": categories[]-> {title,slug},
+  "series":series-> {title,slug},
+}`;
+
 export const tagsPathsQuery = groq`*[_type == "tags" && defined(slug.current)][]{
   "params": { "slug": slug.current }
 }`;
@@ -216,6 +230,20 @@ export const getCategoriesQuery = groq`*[_type == "category"] {
     publishedAt,
     "postCount": count(*[_type == "post" && references(^._id)]),
   }`;
+
+export const getCategoryRelatedSnippetQuery = groq`*[_type == "snippet" && $slug in categories[]->slug.current]{
+    _createdAt,
+  title,
+  body,
+  "author": author -> {name,slug,image,designation,profiles,bio,about},
+  meta_description,
+  mainImage,
+  slug,
+  "tags": tags[]-> {title,slug},
+  "category": categories[]-> {title,slug},
+  "series":series-> {title,slug},
+  publishedAt,
+}`;
 
 export const getCategoryRelatedPostQuery = groq`*[_type == "post" && $slug in categories[]->slug.current]{
       _createdAt,
@@ -326,6 +354,26 @@ export const getSeriesRelatedPostQuery = groq`*[_type == "post" && series-> slug
 "mainImageWidth": mainImage.asset->metadata.dimensions.width,
   "mainImageHeight": mainImage.asset->metadata.dimensions.height,
 }`;
+
+export const getSeriesRelatedSnippetQuery = groq`*[_type == "snippet" && series-> slug.current == $slug] {
+  _id,_createdAt,
+  publishedAt,
+    title,
+    body,
+    "author": author -> {name,slug,image,designation,profiles,bio,about},
+    meta_description,
+    mainImage,
+    slug,
+    "tags": tags[]-> {title,slug},
+    "category": categories[]-> {title,slug},
+    "series":series-> {title,slug},
+    "numberOfCharacters": length(pt::text(body)),
+"estimatedWordCount": round(length(pt::text(body)) / 5),
+"estimatedReadingTime": round(length(pt::text(body)) / 5 / 180 ),
+"mainImageWidth": mainImage.asset->metadata.dimensions.width,
+"mainImageHeight": mainImage.asset->metadata.dimensions.height,
+}`;
+
 
 export const seriesNextAndPerviousPostOfRelatedPost = groq`
 *[_type == "post"  && series->slug.current == $seriesSlug] {

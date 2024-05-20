@@ -38,7 +38,6 @@ const Snippets = async () => {
               />
             ) : <p>Nenhum Post encontrado</p>
           }
-         
         </div>
       </div>
     </section>

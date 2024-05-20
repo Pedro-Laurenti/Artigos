@@ -1,15 +1,13 @@
 import React from "react";
 import { ContentsTypeCard, MyInfoCard } from "@/components/index";
-import Image from "next/legacy/image";
-import Link from "next/link";
 
 
 const HeroSection = () => {
   return (
     <>
-     
-     <section className="w-full md:pt-[100px] md:pb-[70px] pt-[90px] pb-20 mb-10 dark:bg-slate-800 bg-slate-200">
-     
+    
+    <section className="w-full md:pt-[100px] md:pb-[70px] pt-[90px] pb-20 mb-10 dark:bg-slate-800 bg-slate-200">
+    
           <div className="container px-3">
         <div  className="flex flex-wrap items-start md:flex-nowrap justify-center">
         </div>

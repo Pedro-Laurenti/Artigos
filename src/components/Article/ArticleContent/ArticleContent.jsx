@@ -7,8 +7,6 @@ const ArticleContent = ({ ARTICLE_CONTENT }) => {
     <>
       <div className="dark:text-gray-300">
         <PortableText value={body} components={articePortableText} /></div>
-
-
     </>
   );
 };

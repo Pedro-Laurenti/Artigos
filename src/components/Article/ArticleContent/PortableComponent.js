@@ -46,9 +46,9 @@ const articePortableText = {
           {value}
         </CopyableCodeBlock>
       ),
-      image: ({ value }) => (<ImagePortableCom value={value} />)
+      image: ({ value }) => (<ImagePortableCom value={value} className="relative "/>)
 
     },
   };
 
-  export default articePortableText
+export default articePortableText

@@ -35,7 +35,6 @@ const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet, isAbout }: any) => {
             <div className='flex flex-wrap items-center justify-center text-base font-medium mt-8'>
                 <div className='m-5 flex flex-wrap items-center justify-evenly'>
                     <div>
-                       
                         <Image
                             src={`${urlFor(author?.image?.asset?._ref)}`}
                             alt={author?.image?.alt}

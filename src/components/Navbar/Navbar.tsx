@@ -49,6 +49,7 @@ const Navbar = () => {
   // Dark mode switch
 
   const { theme, setTheme } = useTheme();
+
   const [showSearch, setShowSearch] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -61,7 +62,7 @@ const Navbar = () => {
   }, [showSearch]);
 
   const changeTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   return (

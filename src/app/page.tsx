@@ -46,18 +46,9 @@ export default async function Home() {
     return (
         <>
             <div
-                className={
-                    "font-regular bg-slate-100 pb-[20px] text-lg leading-relaxed text-black dark:bg-slate-900 dark:text-white md:min-h-screen"
-                }
-                key={Math.random()}
+                className={"font-regular bg-slate-100 pb-[20px] text-lg leading-relaxed text-black dark:bg-slate-900 dark:text-white md:min-h-screen"} key={Math.random()}
             >
                 <HeroSection />
-
-                <div className="flex flex-col items-center w-full my-40">
-                    <div className="w-1/2">
-                        <Flow />
-                    </div>
-                </div>
                 
                 <Suspense fallback={"Carregando"}>
                     <div className='container mx-auto mb-20 px-0 lg:px-[15px]'>
@@ -83,6 +74,19 @@ export default async function Home() {
                     </div>
                 
                 </Suspense>
+
+                <div className="container mx-auto mt-20 mb-20 px-0 lg:px-[15px]">
+                    
+                    <h1 className='mb-5 w-full px-3 text-xl font-bold md:text-3xl'>
+                        Saiba como participar
+                    </h1>
+
+                    <hr className='border-1 mx-auto mb-5 w-[98%]' />
+
+
+                        <Flow />
+                </div>
+
 
                 <div className='container mx-auto mt-20 px-0 lg:px-[15px]'>
                     <div className={"flex flex-wrap"}>

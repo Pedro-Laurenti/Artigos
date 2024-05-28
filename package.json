@@ -1,6 +1,6 @@
 {
   "name": "artigos-tlk",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -16,6 +16,9 @@
     "@sanity/image-url": "1.0.2",
     "@sanity/locale-pt-br": "^1.1.5",
     "@sanity/vision": "3.39.0",
+    "@tsparticles/engine": "^3.4.0",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.4.0",
     "@types/node": "20.12.7",
     "@types/react": "18.2.79",
     "@types/react-dom": "18.2.25",
@@ -35,6 +38,7 @@
     "react-router-dom": "^6.23.0",
     "react-syntax-highlighter": "15.5.0",
     "react-tabs": "^6.0.2",
+    "react-tsparticles": "^2.12.2",
     "reactjs-popup": "^2.0.6",
     "reading-time": "1.5.0",
     "sanity": "3.39.0",
@@ -44,6 +48,8 @@
     "smooth-scrollbar": "^8.8.4",
     "style-loader": "4.0.0",
     "styled-components": "6.1.8",
+    "tsparticles": "^3.4.0",
+    "tsparticles-slim": "^2.12.0",
     "typescript": "5.4.5",
     "typewriter-effect": "^2.21.0"
   },

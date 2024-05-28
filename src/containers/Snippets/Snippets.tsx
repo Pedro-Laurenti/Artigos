@@ -18,8 +18,6 @@ const Snippets: React.FC<SnippetsProps> = ({
 }) => {
   const articlesPerPage = noOfSnippet || 9;
 
-  // const [articles, setArticles] = useState([]);
-
   const [currentItems, setCurrentItems] = useState(snippets || []);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
@@ -39,21 +37,19 @@ const Snippets: React.FC<SnippetsProps> = ({
     <>
       <div className="flex flex-wrap">
         {currentItems?.length
-          ? (currentItems as any)
-              .slice(0, articlesPerPage )
-              .map((each: any, i: number) => (
-                <SnippetCard
-                  snippet={each}
-                  key={i + each._id}
-                  path={`/posts/${each.slug.current}`}
-                />
-              ))
+          ? currentItems.map((each: any) => (
+              <SnippetCard
+                snippet={each}
+                key={each._id} // Ensure unique key
+                path={`/posts/${each.slug.current}`}
+              />
+            ))
           : null}
       </div>
 
       <br />
 
-      {!isArchive && snippets?.length > articlesPerPage  && (
+      {!isArchive && snippets?.length > articlesPerPage && (
         <div className="flex flex-col justify-center">
           <ReactPaginate
             breakLabel="..."
@@ -83,22 +79,3 @@ const Snippets: React.FC<SnippetsProps> = ({
 };
 
 export default Snippets;
-
-
-  {/* {SORTED_SNIPPETS_BY_DATE.length
-        ? SORTED_SNIPPETS_BY_DATE.map((each, i) => (
-            <SnippetCard key={i} snippet={each} />
-          ))
-        : null}
-
-      {isArchive &&
-      SORTED_SNIPPETS_BY_DATE.length > articlesPerPage  ? (
-        <div className="w-full flex items-center">
-          <Link
-            href="/pages/blog"
-            className="w-auto h-auto text-sm py-3 px-10 text-center dark:bg-slate-800 bg-appBlue-100 rounded-full mx-auto text-white font-bold hover:!text-white dark:hover:!text-slate-400 transition-all transform hover:scale-105"
-          >
-            View All Snippets
-          </Link>
-        </div>
-      ) : null} */}

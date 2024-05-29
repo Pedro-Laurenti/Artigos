@@ -24,6 +24,7 @@ export const Breadcrumbs=dynamic(()=>import('./Breadcrumbs/Breadcrumbs'))
 export const ProfileLink=dynamic(()=>import('./ProfileLink/ProfileLink'))
 export const GitHubComment = dynamic(()=>import('./GitHubComment/GitHubComment'))
 export const AnimatedParticles = dynamic(()=>import('./animatedParticles/AnimatedParticles.jsx'))
-export const AnimatedParticlesDark = dynamic(()=>import('./animatedParticles/AnimatedParticlesDark.jsx'))
+
+export const Grid = dynamic(()=> import('./Grid/Grid.js'))
 
 export const Flow = dynamic(()=>import('./Flow/Flow'))

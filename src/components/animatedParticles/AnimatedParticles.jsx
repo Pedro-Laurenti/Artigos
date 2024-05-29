@@ -50,9 +50,9 @@ const ParticlesComponent = (props) => {
             particles: {
                 color: ["#2EB67D", "#ECB22E", "#E01E5B", "#36C5F0"],
                 number: {
-                    value: 10,
+                    value: 20,
                     min: 10,
-                    max: 50
+                    max: 80
                 },
                 links: {
                     color: "#828282",

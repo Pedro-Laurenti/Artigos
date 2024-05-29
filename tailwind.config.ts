@@ -27,40 +27,40 @@ const tailwind = {
 
       colors: {
         /* appPurple */
-       appBlue:{
+      appBlue:{
         50:'#7cdbe6',
         100:'#0095A5',
         200:'#095F68',
         300:'#171E46',
         400:'#0B131A',
-       },
-       appRed:{
+      },
+      appRed:{
         100:'#BC000A',
         200:'#98171e',
         300:'#691419',
         400:'#420b0f',
-       },
-       appYellow:{
+      },
+      appYellow:{
         100:'#E8B100',
         200:'#b28c10',
         300:'#846912',
         400:'#4b3c0a',
-       },
-       appGreen:{
+      },
+      appGreen:{
         100:'#008E2B',
         200:'#0a7029',
         300:'#085720',
         400:'#022f10',
-       },
-       appGray:{
+      },
+      appGray:{
         100:'#FEFEFE',
         200:'#d5d5d5',
         300:'#787878',
         400:'#1f1f1f',
-       },
-       /* blogText:{
+      },
+      /* blogText:{
         100:"rgb(222 226 227)"
-       } */
+      } */
       },
       right:{
         12:"12rem"

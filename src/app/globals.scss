@@ -16,6 +16,12 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .container {
+      max-width: 80vw !important;
+  }
+}
+
 .circle {
   @apply w-4 h-4 my-12 mx-1 bg-appBlue-50 rounded-full;
 }

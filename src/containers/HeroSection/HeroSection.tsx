@@ -13,19 +13,19 @@ const HeroSection = () => {
           <div className="flex flex-wrap items-start md:flex-nowrap justify-center">
             <div className="flex flex-wrap md:flex-nowrap justify-center items-center">
               <div
-                className={`dark:hidden flex flex-col md:items-center justify-between bg-gradient-to-t text-black rounded-3xl ${styles.shadowWHITE}`}>
+                className={`dark:hidden select-none flex flex-col md:items-center justify-between bg-gradient-to-t text-black rounded-3xl ${styles.shadowWHITE}`}>
                 <MyInfoCard />
               </div>
               <div
-                className={`hidden dark:flex flex-col md:items-center justify-between dark:text-white bg-gradient-to-t text-black rounded-3xl ${styles.shadowDARK}`}>
+                className={`hidden dark:flex select-none flex-col md:items-center justify-between rounded-3xl ${styles.shadowDARK}`}>
                 <MyInfoCard />
               </div>
               <div className="flex flex-col md:flex-col md:items-center mt-20 md:mt-0 md:w-1/2">
                 <h1 className='mb-5 px-3 text-3xl font-bold text-center cursor-pointer'>
-                  <strong className="text-appGray-400 dark:text-appGray-100">Artigos </strong>
-                    <strong className="text-appBlue-100 dark:text-appBlue-50">Therapies Love Kids</strong>
+                  <strong className="text-appGray-400 dark:text-appGray-100 select-none">Artigos </strong>
+                  <strong className="text-appBlue-100 dark:text-appBlue-50 select-none">Therapies Love Kids</strong>
                 </h1>
-                <div className="flex justify-center mt-5 flex-wrap ">
+                <div className="flex justify-center mt-5 flex-wrap select-none">
                   <ContentsTypeCard />
                 </div>
               </div>

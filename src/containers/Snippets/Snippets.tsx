@@ -7,7 +7,7 @@ import { AiFillCaretRight, AiFillCaretLeft } from "react-icons/ai";
 
 interface SnippetsProps {
   isArchive: boolean;
-  snippets: any;
+  snippets: any[];
   noOfSnippet: number;
 }
 
@@ -24,23 +24,23 @@ const Snippets: React.FC<SnippetsProps> = ({
 
   useEffect(() => {
     const endOffset = itemOffset + articlesPerPage;
-    setCurrentItems(snippets?.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(snippets?.length / articlesPerPage));
+    setCurrentItems(snippets.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(snippets.length / articlesPerPage));
   }, [itemOffset, articlesPerPage, snippets]);
 
   const handlePageClick = (event: any) => {
-    const newOffset = (event.selected * articlesPerPage) % snippets?.length;
+    const newOffset = (event.selected * articlesPerPage) % snippets.length;
     setItemOffset(newOffset);
   };
 
   return (
     <>
       <div className="flex flex-wrap">
-        {currentItems?.length
-          ? currentItems.map((each: any) => (
+        {currentItems.length > 0
+          ? currentItems.map((each: any, i: number) => (
               <SnippetCard
                 snippet={each}
-                key={each._id} // Ensure unique key
+                key={i + each.slug.current}
                 path={`/posts/${each.slug.current}`}
               />
             ))
@@ -49,7 +49,7 @@ const Snippets: React.FC<SnippetsProps> = ({
 
       <br />
 
-      {!isArchive && snippets?.length > articlesPerPage && (
+      {!isArchive && snippets.length > articlesPerPage && (
         <div className="flex flex-col justify-center">
           <ReactPaginate
             breakLabel="..."

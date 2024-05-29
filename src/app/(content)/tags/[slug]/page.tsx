@@ -13,37 +13,38 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const snippets = await sanityFetch<SanityDocument>({
+  const snippets = await sanityFetch<SanityDocument[]>({
     query: getTagRelatedSnippetQuery,
     params,
   });
 
-  const articles = await sanityFetch<SanityDocument>({
+  const articles = await sanityFetch<SanityDocument[]>({
     query: getTagRelatedPostQuery,
     params,
   });
 
-  const post = snippets || articles;
+  const post = snippets.length > 0 ? snippets[0] : articles.length > 0 ? articles[0] : null;
 
-  if (!post)
+  if (!post) {
     return {
       title: "Não encontrado",
       description: "Página não encontrada",
     };
+  }
 
   return {
     title: slugToTitle(params.slug),
-    description: post?.meta_description,
+    description: post?.meta_description || "Descrição padrão",
   };
 }
 
 const TagDetail = async ({ params }: { params: { slug: string } }) => {
-  const snippets = await sanityFetch<SanityDocument>({
+  const snippets = await sanityFetch<SanityDocument[]>({
     query: getTagRelatedSnippetQuery,
     params,
   });
 
-  const articles = await sanityFetch<SanityDocument>({
+  const articles = await sanityFetch<SanityDocument[]>({
     query: getTagRelatedPostQuery,
     params,
   });
@@ -63,14 +64,14 @@ const TagDetail = async ({ params }: { params: { slug: string } }) => {
         </Text>
 
         <div className={"flex flex-col flex-wrap"}>
-          {snippets?.length > 0 && (
+          {snippets.length > 0 && (
             <Snippets
               isArchive={false}
               noOfSnippet={9}
               snippets={snippets}
             />
           )}
-          {articles?.length > 0 && (
+          {articles.length > 0 && (
             <HomeArticles
               isArchive={false}
               noOfArticle={9}
@@ -79,7 +80,7 @@ const TagDetail = async ({ params }: { params: { slug: string } }) => {
               isExternal={false}
             />
           )}
-          {(!snippets || snippets.length === 0) && (!articles || articles.length === 0) && (
+          {snippets.length === 0 && articles.length === 0 && (
             <h1>Nenhum artigo encontrado </h1>
           )}
         </div>

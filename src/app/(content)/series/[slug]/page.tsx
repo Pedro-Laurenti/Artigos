@@ -1,6 +1,6 @@
 import { Text, Breadcrumbs } from "@/components";
 import { HomeArticles, Snippets } from "@/containers";
-import {slugToTitle} from "@/utils/utils";
+import { slugToTitle } from "@/utils/utils";
 import { Metadata } from "next";
 import { SanityDocument } from "@sanity/client";
 import { getSeriesRelatedPostQuery, getSeriesRelatedSnippetQuery } from "@/sanity/lib/queries";
@@ -13,39 +13,38 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const snippets = await sanityFetch<SanityDocument>({
-    query: getSeriesRelatedSnippetQuery ,
-    params,
-  });
-
-  const articles = await sanityFetch<SanityDocument>({
-    query: getSeriesRelatedPostQuery,
-    params,
-  });
-
-  const post = snippets || articles;
-  
-  
-  if (!post)
-    return {
-      title: "Não encontrado",
-      description: "Página não encontrada",
-    };
-
-  return {
-    title: slugToTitle(params.slug),
-    description: post?.meta_description,
-  };
-}
-
-
-const SeriesDetail = async ({ params }: { params: { slug: string } }) => {
-  const snippets = await sanityFetch<SanityDocument>({
+  const snippets = await sanityFetch<SanityDocument[]>({
     query: getSeriesRelatedSnippetQuery,
     params,
   });
 
-  const articles = await sanityFetch<SanityDocument>({
+  const articles = await sanityFetch<SanityDocument[]>({
+    query: getSeriesRelatedPostQuery,
+    params,
+  });
+
+  const post = snippets.length > 0 ? snippets[0] : articles.length > 0 ? articles[0] : null;
+
+  if (!post) {
+    return {
+      title: "Não encontrado",
+      description: "Página não encontrada",
+    };
+  }
+
+  return {
+    title: slugToTitle(params.slug),
+    description: post?.meta_description || "Descrição padrão",
+  };
+}
+
+const SeriesDetail = async ({ params }: { params: { slug: string } }) => {
+  const snippets = await sanityFetch<SanityDocument[]>({
+    query: getSeriesRelatedSnippetQuery,
+    params,
+  });
+
+  const articles = await sanityFetch<SanityDocument[]>({
     query: getSeriesRelatedPostQuery,
     params,
   });
@@ -57,17 +56,19 @@ const SeriesDetail = async ({ params }: { params: { slug: string } }) => {
       <div className="mt-19">
         <Breadcrumbs pageName="Séries" pageSlug={title} pageLink="/series" />
         
-        <Text title className="mb-8 mt-10 dark:text-appBlue-50 text-appBlue-100 capitalize" > {title} </Text>
+        <Text title className="mb-8 mt-10 dark:text-appBlue-50 text-appBlue-100 capitalize">
+          {title}
+        </Text>
 
         <div className={"flex flex-col flex-wrap"}>
-          {snippets?.length > 0 && (
+          {snippets.length > 0 && (
             <Snippets
               isArchive={false}
               noOfSnippet={9}
               snippets={snippets}
             />
           )}
-          {articles?.length > 0 && (
+          {articles.length > 0 && (
             <HomeArticles
               isArchive={false}
               noOfArticle={9}
@@ -76,8 +77,8 @@ const SeriesDetail = async ({ params }: { params: { slug: string } }) => {
               isExternal={false}
             />
           )}
-          {(!snippets || snippets.length === 0) && (!articles || articles.length === 0) && (
-            <h1>Nenhum artigo encontrado </h1>
+          {snippets.length === 0 && articles.length === 0 && (
+            <h1>Nenhum artigo encontrado</h1>
           )}
         </div>
       </div>
